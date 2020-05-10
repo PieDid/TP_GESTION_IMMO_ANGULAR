@@ -92,8 +92,8 @@ puis effectuer un :
 
         git pull origin master
 
-Les modifications devrait être importées. 
 
+Les modifications devrait être importées. 
 
 ## Import de Angular powered Bootstrap 
 dans le projet, entrer dans la console : 
