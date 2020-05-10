@@ -41,7 +41,7 @@ et créer un projet angular :
 
 A ce stade, le projet 'angularTPImmo' devrait être crée. 
 
-## Etape 2 : Ajout de Bootstarp et JQuery.
+## Etape 2 : (à ne pas faire si vous faites Etape 2 Bis) Ajout de Bootstarp et JQuery.
 
 Se placer dans le projet en tapant dans la console 'cd angularTPImmo'
 
@@ -76,6 +76,15 @@ Lancer angular avec :
 
 Le navigateur devrait afficher le titre 'Test bootstrap' et trois boutons (vert, bleu-vert, rouge) , le bouton rouge ne pouvant aps etre cliqué. 
 
+## Etape 2 Bis : Import de Angular powered Bootstrap 
+dans le projet, entrer dans la console : 
+
+        ng add @ng-bootstrap/ng-bootstrap
+
+
+... c'est pret ! 
+
+Site web pour la doc : https://ng-bootstrap.github.io/#/components/alert/examples
 
 
 ## Etape 3 : Import de GitHub
@@ -95,15 +104,7 @@ puis effectuer un :
 
 Les modifications devrait être importées. 
 
-## Import de Angular powered Bootstrap 
-dans le projet, entrer dans la console : 
 
-        ng add @ng-bootstrap/ng-bootstrap
-
-
-... c'est pret ! 
-
-Site web pour la doc : https://ng-bootstrap.github.io/#/components/alert/examples
 
 
 

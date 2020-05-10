@@ -24,12 +24,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "node_modules/jquery/dist/jquery.min.js"
             ]
           },
           "configurations": {
@@ -123,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angularTPImmo"
+    }
+  },
+  "defaultProject": "angularTPImmo",
+  "cli": {
+    "analytics": "da588288-bb45-4fe4-9c78-78de90a1f578"
+  }
 }
