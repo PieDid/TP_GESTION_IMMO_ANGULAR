@@ -95,6 +95,15 @@ puis effectuer un :
 Les modifications devrait être importées. 
 
 
+## Import de Angular powered Bootstrap 
+dans le projet, entrer dans la console : 
+
+        ng add @ng-bootstrap/ng-bootstrap
+
+
+... c'est pret ! 
+
+Site web pour la doc : https://ng-bootstrap.github.io/#/components/alert/examples
 
 
 
