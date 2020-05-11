@@ -1,0 +1,38 @@
+<div class="container">
+
+    <!-- barre de navigation -->
+    <nav class="navbar navbar-expand-lg  bg-faded">
+
+        <!-- logo  -> accueil -->
+        <a class="navbar-brand" (click)="goAccueil()">
+            <img src="assets/images/icones/logoIB.png" width="30" height="60" class="d-inline-block align-top" alt="">
+            <span class="nomLogo">Immo'Bill</span>
+        </a>
+        
+        <div class="navbar-nav">
+            <a class="nav-link" routerLink="/achat" routerLinkActive="active">Achat</a>
+            <a class="nav-link" [routerLink]="['location']"
+            [routerLinkActive]="['active','decoration']">Location</a>
+            <li ngbDropdown class="">
+                <a href (click)="false" class="nav-link" ngbDropdownToggle>Biens</a>
+                <div ngbDropdownMenu class="DropdownMenu">
+                    <div >
+                        <a class="nav-link" [routerLink]="['biens','disponibles']"
+                            [routerLinkActive]="['active','decoration']">Biens disponibles </a>
+                    </div>
+                    <div>
+                        <a class="nav-link" [routerLink]="['biens','occupes']"
+                            [routerLinkActive]="['active','decoration']">Biens Occupés</a>
+                    </div>
+                </div>
+            </li>
+        </div>
+
+        <!-- bouton 'Se connecter' -->
+        <div>
+            <button class="btn">Se connecter</button>
+        </div>
+       
+    </nav>
+
+</div>

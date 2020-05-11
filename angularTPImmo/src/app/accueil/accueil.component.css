@@ -1,0 +1,44 @@
+
+/* carroussel */
+.carroussel{
+    background-color: black;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    height: 50%;
+}
+
+/* image */
+img{
+    width: 700px;
+    height: 400px;
+}
+
+
+/* div du texte */
+.carousel-caption{
+    background-color:  rgba(0, 0, 0, 0.4);
+}
+
+/* texte du carroussel */
+h3, p{
+    color: goldenrod;
+    
+}
+
+/* lien du carroussel */
+a{
+    color: black;
+    font-weight: bold;
+    background-color: goldenrod;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+a:hover{
+    color: goldenrod;
+    font-weight: bold;
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+}

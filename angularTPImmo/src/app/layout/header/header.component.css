@@ -1,0 +1,49 @@
+/* ensemble du header */
+.container{
+    text-align: center;
+    background-color: black;
+    border-radius: 10px;
+    height: 85px;
+    margin-bottom: 50px;
+}
+
+/* logo */
+
+img{
+    width:60px;
+    border: lightgray solid;
+}
+
+.nomLogo{
+  font-size: 30pt;
+  padding-left: 10px;
+}
+
+/*
+nav div, nav a{
+    display: inline-block;
+}*/
+
+nav button{
+    margin-left: 520px;
+    width: 18%;
+    padding-left: 2px;
+    /*margin-top : 25px;*/
+    background-color: goldenrod;
+   
+}
+
+a{
+    background-color: black;
+    color: #daa520;
+}
+
+a:hover{
+    background-color: goldenrod;
+    color: black;
+    border-radius: 5px;
+}
+
+.DropdownMenu{
+    background-color: black;
+}

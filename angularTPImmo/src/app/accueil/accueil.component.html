@@ -1,0 +1,102 @@
+<ngb-carousel *ngIf="images" class="carroussel">
+
+    <!-- maisons  -->
+    <ng-template ngbSlide>
+        <!-- image -->
+        <div class="picsum-img-wrapper">
+            <img [src]="images[0]" alt="Maisons">
+        </div>
+        <!-- texte -->
+        <div class="carousel-caption">
+            <h3>Maisons</h3>
+            <p>Offrez vous la maison de vos rêves !<p>
+            <a href="/biens/maisons">Voir les offres</a>
+        </div>
+    </ng-template>
+
+    <!-- bureaux  -->
+    <ng-template ngbSlide>
+        <!-- image -->
+        <div class="picsum-img-wrapper">
+            <img [src]="images[1]" alt="Bureaux">
+        </div>
+        <!-- texte -->
+        <div class="carousel-caption">
+            <h3>Bureaux</h3>
+            <p>Besoins de locaux pour votre entreprise? Découvrez nos bureaux !<p>
+            <a href="/biens/bureaux">Voir les offres</a>
+        </div>
+    </ng-template>
+
+     <!-- commerces  -->
+     <ng-template ngbSlide>
+        <!-- image -->
+        <div class="picsum-img-wrapper">
+            <img [src]="images[2]" alt="Commerces">
+        </div>
+        <!-- texte -->
+        <div class="carousel-caption">
+            <h3>Commerces</h3>
+            <p>Restaurateurs, Couturiers ou Magiciens, vous trouverez un commerce pour vos besoins !<p>
+            <a href="/biens/commerces">Voir les offres</a>
+        </div>
+    </ng-template>
+
+     <!-- entrepôts  -->
+     <ng-template ngbSlide>
+        <!-- image -->
+        <div class="picsum-img-wrapper">
+            <img [src]="images[3]" alt="Entrepôts">
+        </div>
+        <!-- texte -->
+        <div class="carousel-caption">
+            <h3>Entrepôts</h3>
+            <p>Besoin d'un grand espace pour vos cours de chants? Achetez un entrepot !<p>
+            <a href="/biens/entrepots">Voir les offres</a>
+        </div>
+    </ng-template>
+
+     <!--appartements -->
+     <ng-template ngbSlide>
+        <!-- image -->
+        <div class="picsum-img-wrapper">
+            <img [src]="images[4]" alt="Appartements">
+        </div>
+        <!-- texte -->
+        <div class="carousel-caption">
+            <h3>Appartements</h3>
+            <p>Nouveau couples, Venez découvrir l'appartement parfait pour vous et vos futurs enfants !<p>
+            <a href="/biens/appartements">Voir les offres</a>
+        </div>
+    </ng-template>
+
+     <!-- studios -->
+     <ng-template ngbSlide>
+        <!-- image -->
+        <div class="picsum-img-wrapper">
+            <img [src]="images[5]" alt="Studios">
+        </div>
+        <!-- texte -->
+        <div class="carousel-caption">
+            <h3>Studios</h3>
+            <p>Un etudiant studieux etudie en studio ! Saissisez sans soucis ceux étudiés pour vous !<p>
+            <a href="/biens/studios">Voir les offres</a>
+        </div>
+    </ng-template>
+
+     <!-- terrains -->
+     <ng-template ngbSlide>
+        <!-- image -->
+        <div class="picsum-img-wrapper">
+            <img [src]="images[6]" alt="Terrains">
+        </div>
+        <!-- texte -->
+        <div class="carousel-caption">
+            <h3>Terrains</h3>
+            <p>Besoin d'un grand terrain pour votre future maison ? Trouveez notre gamme ici !<p>
+            <a href="/biens/terrains">Voir les offres</a>
+        </div>
+    </ng-template>
+ 
+    
+</ngb-carousel>

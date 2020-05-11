@@ -1,0 +1,63 @@
+.container{
+    text-align: center;
+    vertical-align: auto;
+    background-color: black;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.info{
+    padding-top : 10px;
+}
+
+a{
+    color: #daa520;
+}
+
+a:hover{
+    font-weight: bold;
+    color: goldenrod;
+}
+
+hr{
+    width: 50%;
+    color: #daa520;
+    border: solid 1px;
+}
+
+.left{
+    width: 45%;
+    border-right: goldenrod solid 1px ;
+    display: inline-block;
+}
+.right{
+    width: 45%;
+    display: inline-block;
+}
+
+/** Redirection Haut de page **/
+
+/* div */
+#div-hdp{
+    background-color: black;
+    width: 8%;
+    display: inline-block;
+    vertical-align: auto;
+}
+
+/* paragraphe */
+.p-hdp{
+    margin-top : 5px;
+    font-size: 10px;
+}
+
+/** copyright **/
+.copyright{
+    padding-top: 10px;
+    padding-bottom: 2px;
+    color: lightyellow;
+}
+
+
+
+

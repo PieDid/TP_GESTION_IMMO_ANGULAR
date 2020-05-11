@@ -1,0 +1,15 @@
+.page{
+    border: goldenrod 1px solid;
+    border-radius: 20px;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px 10px;
+}
+
+.texte{
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    color: goldenrod;
+   
+}
