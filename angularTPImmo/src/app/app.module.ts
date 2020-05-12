@@ -1,5 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+//import de HttpClientModule :
+import { HttpClientModule } from '@angular/common/http';
+
+import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -53,6 +57,8 @@ import {DonneesPersonnellesComponent} from './layout/donnees-personnelles/donnee
     DonneesPersonnellesComponent
   ],
   imports: [
+    HttpClientModule,
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule
