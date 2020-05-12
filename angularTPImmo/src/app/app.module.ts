@@ -8,6 +8,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { MentionsLegalesComponent } from './layout/mentions-legales/mentions-legales.component';
+import { NosAgencesComponent } from './layout/nos-agences/nos-agences.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MentionsLegalesComponent } from './layout/mentions-legales/mentions-leg
     AccueilComponent,
     HeaderComponent,
     FooterComponent,
-    MentionsLegalesComponent
+    MentionsLegalesComponent,
+    NosAgencesComponent
   ],
   imports: [
     BrowserModule,

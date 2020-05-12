@@ -14,16 +14,13 @@ img{
     border: lightgray solid;
 }
 
+/* nom du logo */
 .nomLogo{
   font-size: 30pt;
   padding-left: 10px;
 }
 
-/*
-nav div, nav a{
-    display: inline-block;
-}*/
-
+/* bouton */
 nav button{
     margin-left: 520px;
     width: 18%;
@@ -33,17 +30,20 @@ nav button{
    
 }
 
+/* liens */
 a{
     background-color: black;
     color: #daa520;
 }
 
+/* liens survolé */
 a:hover{
     background-color: goldenrod;
     color: black;
     border-radius: 5px;
 }
 
+/* menu déroulant */
 .DropdownMenu{
     background-color: black;
 }
