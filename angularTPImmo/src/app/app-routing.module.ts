@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AccueilComponent } from './accueil/accueil.component';
 import {MentionsLegalesComponent} from './layout/mentions-legales/mentions-legales.component'
+import {DonneesPersonnellesComponent} from './layout/donnees-personnelles/donnees-personnelles.component'
 import {NosAgencesComponent} from './layout/nos-agences/nos-agences.component'
 
 const routes: Routes = [
@@ -9,6 +10,7 @@ const routes: Routes = [
   {path:"accueil", component: AccueilComponent}, // accueil
   {path:"mentionlegales", component:MentionsLegalesComponent},  // mentions légales
   {path:"nosAgences", component:NosAgencesComponent},  // mentions légales
+  {path:"donneesPersonnelles", component:DonneesPersonnellesComponent},  // donnees personnelles
   {path:"**", component: AccueilComponent}];
 
 @NgModule({
