@@ -2,6 +2,7 @@ import { IAdresseBien } from './IAdresseBien';
 import { IVisite } from './IVisite';
 import { IContrat } from './IContrat';
 import { IProprietaire } from './IProprietaire';
+import { IPhoto } from './IPhoto';
 
 /**
  * Modèle de données pour Bien
@@ -17,6 +18,8 @@ export interface IBien {
     dateSoumission : string;
     dateDisposition : string;
     revenu : number;
+
+    listePhoto : IPhoto[];
     listeVisite : IVisite[];
     contrat : IContrat[];
     proprietaire : IProprietaire[]; 
