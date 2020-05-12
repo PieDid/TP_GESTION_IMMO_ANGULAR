@@ -12,4 +12,5 @@ export interface IPersonne {
     statut : boolean;
     adressePersonne : IAdressePersonne;
 
+    photo : string;
 }
