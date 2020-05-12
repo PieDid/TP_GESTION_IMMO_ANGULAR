@@ -1,0 +1,11 @@
+/* CSS pour l'image */
+.imageClass{
+    width: 70px;
+    height: 80px;
+}
+
+/* css pour le détails */
+.vertical-align{
+    display: flex;
+    align-items: center;
+}

@@ -106,7 +106,7 @@ export class ClientService {
    */
   editClient(idClient : number){
 
-    this.router.navigate(['edit/', idClient]);
+    this.router.navigate(['clientEdit/', idClient]);
   }
 
 

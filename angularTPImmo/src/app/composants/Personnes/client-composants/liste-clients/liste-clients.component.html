@@ -1,1 +1,105 @@
-<p>liste-clients works!</p>
+<div class="panel panel-primary" *ngFor="let c of clients">
+
+   <!--  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./liste-clients.component.css"/>
+ -->
+ <h3>YOOOOOOO</h3>
+    <!-- ============================================== -->
+    <!-- =============== Body du panneau ============== -->
+    <!-- ============================================== -->
+    <div class="panel-body">
+        <div class="col-xs-10">
+            <div class="row vertical-align">
+
+                <!-- ++++++++ photo +++++++ -->
+                <div class="col-xs-4">
+                    <img class="imageClass" [src]="c.photo" />
+                </div>
+
+                <!-- ++++++++ détails du client +++++++ -->
+                <div class="col-xs-4">
+
+                    <!-- _______ ID ______ -->
+                    <div class="row">
+                        <div class="col-xs-6">
+                            ID :
+                        </div>
+                        <div class="col-xs-6">
+                            {{c.identifiant}}
+                        </div>
+                    </div>
+
+                    <!-- _______ Nom ______ -->
+                    <div class="row">
+                        <div class="col-xs-6">
+                            Nom :
+                        </div>
+                        <div class="col-xs-6">
+                            {{c.nom}}
+                        </div>
+                    </div>
+
+                    <!-- _______ Email ______ -->
+                    <!-- <div class="row">
+                        <div class="col-xs-6">
+                            Email :
+                        </div>
+                        <div class="col-xs-6">
+                            {{c.email}}
+                        </div>
+                    </div> -->
+
+                    <!-- _______ MDP ______ -->
+                    <!-- <div class="row">
+                        <div class="col-xs-6">
+                            Mot de Passe :
+                        </div>
+                        <div class="col-xs-6">
+                            {{c.motDePasse}}
+                        </div>
+                    </div> -->
+
+                    <!-- _______ Adresse ______ -->
+                    <div class="row">
+                        <div class="col-xs-6">
+                            Adresse :
+                        </div>
+                        <div class="col-xs-6">
+                            {{c.adressePersonne}}
+                        </div>
+                    </div>
+
+                    <!-- _______ Statut ______ -->
+                    <div class="row">
+                        <div class="col-xs-6">
+                            Statut :
+                        </div>
+                        <div class="col-xs-6">
+                            {{c.statut}}
+                        </div>
+                    </div>
+
+                    ⊕
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- ============== footer du panneau ============= -->
+    <!-- ============================================== -->
+    <div class="panel-footer">
+
+        <!-- bouton pour éditer -->
+        <!-- <button class="btn btn-primary" (click)="editClient(e.idClient)">
+            Editer
+        </button> -->
+
+        <!-- bouton pour supprier -->
+        <button class="btn btn-danger" (click)="deleteClient(c)">
+            Supprimer
+        </button>
+    </div>
+</div>
