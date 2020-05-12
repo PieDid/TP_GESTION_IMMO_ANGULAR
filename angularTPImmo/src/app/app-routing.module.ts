@@ -5,7 +5,7 @@ import {MentionsLegalesComponent} from './layout/mentions-legales/mentions-legal
 import {DonneesPersonnellesComponent} from './layout/donnees-personnelles/donnees-personnelles.component'
 import {NosAgencesComponent} from './layout/nos-agences/nos-agences.component'
 import { ListeClientsComponent } from './composants/Personnes/client-composants/liste-clients/liste-clients.component';
-
+import { ListeTerrainsComponent } from './composants/Biens/Terrains/terrain-composants/liste-terrains/liste-terrains.component';
 const routes: Routes = [
   {path:"", redirectTo:"accueil", pathMatch:'full'}, // route par défaut - redirection
   {path:"accueil", component: AccueilComponent}, // accueil
@@ -14,8 +14,9 @@ const routes: Routes = [
   {path:"donneesPersonnelles", component:DonneesPersonnellesComponent},  // donnees personnelles
 
   /* routes personnes */
-  {path:"clientList", component: ListeClientsComponent}/* ,
-
+  {path:"clientList", component: ListeClientsComponent},
+  {path:"terrainList", component: ListeTerrainsComponent }
+/* ,
   {path:"**", component: AccueilComponent} */
 
   

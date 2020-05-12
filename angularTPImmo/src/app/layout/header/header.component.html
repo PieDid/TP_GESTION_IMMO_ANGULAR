@@ -36,3 +36,80 @@
     </nav>
 
 </div>
+
+<div class="container">
+
+    <!-- barre de navigation -->
+    <nav class="navbar navbar-expand-lg  bg-faded">
+
+        <!-- logo  -> accueil -->
+        <a class="navbar-brand" (click)="goAccueil()">
+            <img src="assets/images/icones/logoIB.png" width="30" height="60" class="d-inline-block align-top" alt="">
+            <span class="nomLogo">Acces rapide a retirer</span>
+        </a>
+        
+        <div class="navbar-nav">
+
+            <!-- Personnes -->
+            <li ngbDropdown class="">
+                <a href (click)="false" class="nav-link" ngbDropdownToggle>Personnes</a>
+                <div ngbDropdownMenu class="DropdownMenu">
+                    <div >
+                        <a class="nav-link" [routerLink]="['clientList']"
+                            [routerLinkActive]="['active','decoration']">Client</a>
+                    </div>
+                    <div>
+                        <a class="nav-link" [routerLink]="['agentList']"
+                            [routerLinkActive]="['active','decoration']">Agent</a>
+                    </div>
+                    <div>
+                        <a class="nav-link" [routerLink]="['proprietaireList']"
+                            [routerLinkActive]="['active','decoration']">Proprietaire</a>
+                    </div>
+                    <div>
+                        <a class="nav-link" [routerLink]="['administrateurList']"
+                            [routerLinkActive]="['active','decoration']">Administrateur</a>
+                    </div>
+                
+                </div>
+            </li>
+
+            <!-- Biens -->
+            <li ngbDropdown class="">
+                <a href (click)="false" class="nav-link" ngbDropdownToggle>Biens</a>
+                <div ngbDropdownMenu class="DropdownMenu">
+                    <div >
+                        <a class="nav-link" [routerLink]="['terrainList']"
+                            [routerLinkActive]="['active','decoration']">Terrains</a>
+                    </div>
+                    <div>
+                        <a class="nav-link" [routerLink]="['maisonList']"
+                            [routerLinkActive]="['active','decoration']">Maison</a>
+                    </div>
+                    <div>
+                        <a class="nav-link" [routerLink]="['appartementList']"
+                            [routerLinkActive]="['active','decoration']">Appartement</a>
+                    </div>
+                    <div>
+                        <a class="nav-link" [routerLink]="['studioList']"
+                            [routerLinkActive]="['active','decoration']">Studio</a>
+                    </div>
+                    <div>
+                        <a class="nav-link" [routerLink]="['entrepotsList']"
+                            [routerLinkActive]="['active','decoration']">Entrepot</a>
+                    </div>
+                    <div>
+                        <a class="nav-link" [routerLink]="['bureauList']"
+                            [routerLinkActive]="['active','decoration']">Bureau</a>
+                    </div>
+                    <div>
+                        <a class="nav-link" [routerLink]="['commerceList']"
+                            [routerLinkActive]="['active','decoration']">Commerces</a>
+                    </div>
+                </div>
+            </li>
+        </div>
+       
+    </nav>
+
+</div>
