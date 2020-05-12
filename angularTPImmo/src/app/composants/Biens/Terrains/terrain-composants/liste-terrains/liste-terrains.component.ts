@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TerrainService } from 'src/app/services/terrain.service'
 
 @Component({
   selector: 'app-liste-terrains',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListeTerrainsComponent implements OnInit {
 
-  constructor() { }
+  private _terrains = [];
 
-  ngOnInit(): void {
+  public get terrains() {
+    return this._terrains;
   }
 
-}
+  public set terrains(value) {
+    this._terrains = value;
+  }
+
+  constructor( private terrainService : TerrainService) { }
+
+  ngOnInit(): void {
+    this.terrainService.getAllTerrain().subscribe( data => {this.terrains = data} );
+  } // end ngOnInit()
+
+} // end class
