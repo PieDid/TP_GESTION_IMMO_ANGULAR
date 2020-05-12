@@ -41,4 +41,10 @@ export class BienService {
     return this.httpClient.put<void>(`${this.WS_REST_BASE_URL}Update/${bien.id_bien}`, bien).pipe(tap( () => { this.refreshNeeded.next() } ));
   } // end modifierBiens()
 
+   /*__________ méthodes spécifiques __________*/
+
+   getBiensByOffre(offre : string) : Observable<IBien[]>{
+    return this.httpClient.get<IBien[]>(`${this.WS_REST_BASE_URL}List/offre/${offre}`);
+  } // end getBiensByOffre()
+
 } // end class

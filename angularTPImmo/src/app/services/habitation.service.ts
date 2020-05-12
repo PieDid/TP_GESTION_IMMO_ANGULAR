@@ -63,4 +63,8 @@ export class HabitationService {
     return this.httpClient.get<IHabitation[]>(`${this.WS_REST_BASE_URL}List/superficie/${superficie}`);
   } // end getHabitationsBySuperficie()
 
+  getHabitationsByNbPieces(nbPieces : number) : Observable<IHabitation[]>{
+    return this.httpClient.get<IHabitation[]>(`${this.WS_REST_BASE_URL}List/pieces/${nbPieces}`);
+  } // end getHabitationsByNbPieces()
+
 } // end class

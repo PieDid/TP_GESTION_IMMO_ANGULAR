@@ -41,4 +41,18 @@ export class EntrepotService {
     return this.httpClient.put<void>(`${this.WS_REST_BASE_URL}Update/${entrepot.id_bien}`, entrepot).pipe(tap( () => { this.refreshNeeded.next() } ));
   } // end modifierEntrepots()
 
+  /*__________ méthodes spécifiques __________*/
+
+  getEntrepotsByOffre(offre : string) : Observable<IEntrepot[]>{
+    return this.httpClient.get<IEntrepot[]>(`${this.WS_REST_BASE_URL}List/offre/${offre}`);
+  } // end getEntrepotsByOffre()
+
+  getEntrepotsByPrix(prix : number) : Observable<IEntrepot[]>{
+    return this.httpClient.get<IEntrepot[]>(`${this.WS_REST_BASE_URL}List/prix/${prix}`);
+  } // end getEntrepotsByPrix()
+
+  getEntrepotsBySuperficie(superficie : number) : Observable<IEntrepot[]>{
+    return this.httpClient.get<IEntrepot[]>(`${this.WS_REST_BASE_URL}List/superficie/${superficie}`);
+  } // end getEntrepotsBySuperficie()
+
 } // end class

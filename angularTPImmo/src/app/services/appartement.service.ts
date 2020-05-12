@@ -63,4 +63,8 @@ export class AppartementService {
     return this.httpClient.get<IAppartement[]>(`${this.WS_REST_BASE_URL}List/superficie/${superficie}`);
   } // end getAppartementsBySuperficie()
 
+  getAppartementsByNbPieces(nbPieces : number) : Observable<IAppartement[]>{
+    return this.httpClient.get<IAppartement[]>(`${this.WS_REST_BASE_URL}List/pieces/${nbPieces}`);
+  } // end getAppartementsByNbPieces()
+
 } // end class

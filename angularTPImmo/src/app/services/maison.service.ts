@@ -64,4 +64,8 @@ export class MaisonService {
     return this.httpClient.get<IMaison[]>(`${this.WS_REST_BASE_URL}List/superficie/${superficie}`);
   } // end getMaisonsBySuperficie()
 
+  getMaisonsByNbPieces(nbPieces : number) : Observable<IMaison[]>{
+    return this.httpClient.get<IMaison[]>(`${this.WS_REST_BASE_URL}List/pieces/${nbPieces}`);
+  } // end getMaisonsByNbPieces()
+
 } // end class

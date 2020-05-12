@@ -62,4 +62,8 @@ export class StudioService {
     return this.httpClient.get<IStudio[]>(`${this.WS_REST_BASE_URL}List/superficie/${superficie}`);
   } // end getStudiosBySuperficie()
 
+  getStudiosByNbPieces(nbPieces : number) : Observable<IStudio[]>{
+    return this.httpClient.get<IStudio[]>(`${this.WS_REST_BASE_URL}List/pieces/${nbPieces}`);
+  } // end getStudiosByNbPieces()
+
 } // end class

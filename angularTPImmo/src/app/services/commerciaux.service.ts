@@ -41,4 +41,18 @@ export class CommerciauxService {
     return this.httpClient.put<void>(`${this.WS_REST_BASE_URL}Update/${commerciaux.id_bien}`, commerciaux).pipe(tap( () => { this.refreshNeeded.next() } ));
   } // end modifierCommerciauxs()
 
+  /*__________ méthodes spécifiques __________*/
+
+  getCommerciauxByOffre(offre : string) : Observable<ICommerciaux[]>{
+    return this.httpClient.get<ICommerciaux[]>(`${this.WS_REST_BASE_URL}List/offre/${offre}`);
+  } // end getCommerciauxByOffre()
+
+  getCommerciauxByPrix(prix : number) : Observable<ICommerciaux[]>{
+    return this.httpClient.get<ICommerciaux[]>(`${this.WS_REST_BASE_URL}List/prix/${prix}`);
+  } // end getCommerciauxByPrix()
+
+  getCommerciauxBySuperficie(superficie : number) : Observable<ICommerciaux[]>{
+    return this.httpClient.get<ICommerciaux[]>(`${this.WS_REST_BASE_URL}List/superficie/${superficie}`);
+  } // end getCommerciauxBySuperficie()
+
 } // end class

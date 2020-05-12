@@ -41,4 +41,18 @@ export class CommerceService {
     return this.httpClient.put<void>(`${this.WS_REST_BASE_URL}Update/${commerce.id_bien}`, commerce).pipe(tap( () => { this.refreshNeeded.next() } ));
   } // end modifierCommerces()
 
+   /*__________ méthodes spécifiques __________*/
+
+   getCommerceByOffre(offre : string) : Observable<ICommerce[]>{
+    return this.httpClient.get<ICommerce[]>(`${this.WS_REST_BASE_URL}List/offre/${offre}`);
+  } // end getCommercesByOffre()
+
+  getCommerceByPrix(prix : number) : Observable<ICommerce[]>{
+    return this.httpClient.get<ICommerce[]>(`${this.WS_REST_BASE_URL}List/prix/${prix}`);
+  } // end getCommercesByPrix()
+
+  getCommerceBySuperficie(superficie : number) : Observable<ICommerce[]>{
+    return this.httpClient.get<ICommerce[]>(`${this.WS_REST_BASE_URL}List/superficie/${superficie}`);
+  } // end getCommercesBySuperficie()
+
 } // end class

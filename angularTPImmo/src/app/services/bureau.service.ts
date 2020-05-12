@@ -39,6 +39,20 @@ export class BureauService {
 
   modifierBureau(bureau : IBureau) : Observable<void>{
     return this.httpClient.put<void>(`${this.WS_REST_BASE_URL}Update/${bureau.id_bien}`, bureau).pipe(tap( () => { this.refreshNeeded.next() } ));
-  } // end modifierBureaus()
+  } // end modifierBureaux()
+
+  /*__________ méthodes spécifiques __________*/
+
+  getBureauxByOffre(offre : string) : Observable<IBureau[]>{
+    return this.httpClient.get<IBureau[]>(`${this.WS_REST_BASE_URL}List/offre/${offre}`);
+  } // end getBureauxByOffre()
+
+  getBureauxByPrix(prix : number) : Observable<IBureau[]>{
+    return this.httpClient.get<IBureau[]>(`${this.WS_REST_BASE_URL}List/prix/${prix}`);
+  } // end getBureauxByPrix()
+
+  getBureauxBySuperficie(superficie : number) : Observable<IBureau[]>{
+    return this.httpClient.get<IBureau[]>(`${this.WS_REST_BASE_URL}List/superficie/${superficie}`);
+  } // end getBureauxBySuperficie()
 
 } // end class

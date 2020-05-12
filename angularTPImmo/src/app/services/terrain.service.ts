@@ -41,4 +41,18 @@ export class TerrainService {
     return this.httpClient.put<void>(`${this.WS_REST_BASE_URL}Update/${terrain.id_bien}`, terrain).pipe(tap( () => { this.refreshNeeded.next() } ));
   } // end modifierTerrains()
 
+  /*__________ méthodes spécifiques __________*/
+
+  getTerrainsByOffre(offre : string) : Observable<ITerrain[]>{
+    return this.httpClient.get<ITerrain[]>(`${this.WS_REST_BASE_URL}List/offre/${offre}`);
+  } // end getCommercesByOffre()
+
+  getTerrainsByPrix(prix : number) : Observable<ITerrain[]>{
+    return this.httpClient.get<ITerrain[]>(`${this.WS_REST_BASE_URL}List/prix/${prix}`);
+  } // end getCommercesByPrix()
+
+  getTerrainsBySuperficie(superficie : number) : Observable<ITerrain[]>{
+    return this.httpClient.get<ITerrain[]>(`${this.WS_REST_BASE_URL}List/superficie/${superficie}`);
+  } // end getCommercesBySuperficie()
+
 } // end class
