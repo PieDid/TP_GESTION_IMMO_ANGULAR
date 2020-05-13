@@ -29,10 +29,18 @@ export class ListeTerrainsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.terrainService.getAllTerrain().subscribe( data => {this.terrains = data} );
+    //rafraichissement de la page
+    this.terrainService.refreshNeeded.subscribe(
+      () => { this.getAllTerrains(); }
+    );
+    this.getAllTerrains();
   } // end ngOnInit()
 
-  
+
+  getAllTerrains(){
+    this.terrainService.getAllTerrain().subscribe(
+      data => {this.terrains = data} );
+  }
 
   editTerrain(id_bien : number){
     this.router.navigate(['terrain/',id_bien]);
