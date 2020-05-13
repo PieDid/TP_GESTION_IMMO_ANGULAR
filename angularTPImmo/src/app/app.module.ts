@@ -32,6 +32,10 @@ import {DonneesPersonnellesComponent} from './layout/donnees-personnelles/donnee
 import { CreateClientComponent } from './composants/Personnes/client-composants/create-client/create-client.component';
 import { CreateAgentComponent } from './composants/Personnes/agent-composants/create-agent/create-agent.component';
 import { TerrainComponent } from './composants/Biens/Terrains/terrain-composants/terrain/terrain.component';
+import { ListeProprietairesComponent } from './composants/Personnes/proprietaire-composants/liste-proprietaires/liste-proprietaires.component';
+import { CreateProprietaireComponent } from './composants/Personnes/proprietaire-composants/create-proprietaire/create-proprietaire.component';
+import { ListeAdministrateursComponent } from './composants/Personnes/administrateur-composants/liste-administrateurs/liste-administrateurs.component';
+import { CreateAdministrateurComponent } from './composants/Personnes/administrateur-composants/create-administrateur/create-administrateur.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +63,11 @@ import { TerrainComponent } from './composants/Biens/Terrains/terrain-composants
     DonneesPersonnellesComponent,
     CreateClientComponent,
     CreateAgentComponent,
-    TerrainComponent
+    TerrainComponent,
+    ListeProprietairesComponent,
+    CreateProprietaireComponent,
+    ListeAdministrateursComponent,
+    CreateAdministrateurComponent
   ],
   imports: [
     HttpClientModule,

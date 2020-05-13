@@ -10,6 +10,11 @@ import { ListeAgentsComponent } from './composants/Personnes/agent-composants/li
 import { CreateAgentComponent } from './composants/Personnes/agent-composants/create-agent/create-agent.component';
 import { ListeTerrainsComponent } from './composants/Biens/Terrains/terrain-composants/liste-terrains/liste-terrains.component';
 import { TerrainComponent } from './composants/Biens/Terrains/terrain-composants/terrain/terrain.component';
+import { ListeProprietairesComponent } from './composants/Personnes/proprietaire-composants/liste-proprietaires/liste-proprietaires.component';
+import { CreateProprietaireComponent } from './composants/Personnes/proprietaire-composants/create-proprietaire/create-proprietaire.component';
+import { ListeAdministrateursComponent } from './composants/Personnes/administrateur-composants/liste-administrateurs/liste-administrateurs.component';
+import { CreateAdministrateurComponent } from './composants/Personnes/administrateur-composants/create-administrateur/create-administrateur.component';
+
 const routes: Routes = [
   {path:"", redirectTo:"accueil", pathMatch:'full'}, // route par défaut - redirection
   {path:"accueil", component: AccueilComponent}, // accueil
@@ -22,6 +27,10 @@ const routes: Routes = [
   {path:"clientEdit/:id", component: CreateClientComponent},
   {path:"agentList", component: ListeAgentsComponent},
   {path:"agentEdit/:id", component: CreateAgentComponent},
+  {path:"proprietaireList", component: ListeProprietairesComponent},
+  {path:"proprietaireEdit/:id", component: CreateProprietaireComponent},
+  {path:"administrateurList", component: ListeAdministrateursComponent},
+  {path:"administrateurEdit/:id", component: CreateAdministrateurComponent},
   {path:"terrainList", component: ListeTerrainsComponent },
   {path:"terrain/:id", component: TerrainComponent }
 /* ,
