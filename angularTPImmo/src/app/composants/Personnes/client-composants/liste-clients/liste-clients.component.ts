@@ -13,6 +13,9 @@ export class ListeClientsComponent implements OnInit {
   //prop : tableau de clients
   clients = [];
 
+  //prop : pour la gestion de l'aperçu des infos supplémentaires
+  previewInfos : boolean = false;
+
 
   /**
    * ctor du composant : 
@@ -70,8 +73,18 @@ export class ListeClientsComponent implements OnInit {
    * l'id du client à cette route
    * @param idClient
    */
-/*   editClient(idClient: number) {
+  editClient(idClient: number) {
     this.router.navigate(['edit/', idClient]);
-  } */ //end editClient
+  } //end editClient
+
+  //méthode pour la gestion de l'aperçu des infos
+  toggleInfosPreview(){
+    this.previewInfos = !this.previewInfos;
+  }
+
+  //méthode pour la pop-up
+  /* openModal(liste_visites : IClient["liste_visites"]){
+    document.getElementById("modal").style.top = "0px";
+  } */
 
 }

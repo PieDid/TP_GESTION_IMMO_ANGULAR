@@ -28,7 +28,8 @@ import { ListeContratLocationComponent } from './composants/Contrats/contratLoca
 import { ListeContratVenteComponent } from './composants/Contrats/contratVente-composants/liste-contrat-vente/liste-contrat-vente.component';
 import { ListeAgentsComponent } from './composants/Personnes/agent-composants/liste-agents/liste-agents.component';
 import { AgentComponent } from './composants/Personnes/agent-composants/agent/agent.component';
-import {DonneesPersonnellesComponent} from './layout/donnees-personnelles/donnees-personnelles.component'
+import {DonneesPersonnellesComponent} from './layout/donnees-personnelles/donnees-personnelles.component';
+import { CreateClientComponent } from './composants/Personnes/client-composants/create-client/create-client.component'
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import {DonneesPersonnellesComponent} from './layout/donnees-personnelles/donnee
     ListeContratVenteComponent,
     ListeAgentsComponent,
     AgentComponent,
-    DonneesPersonnellesComponent
+    DonneesPersonnellesComponent,
+    CreateClientComponent
   ],
   imports: [
     HttpClientModule,
