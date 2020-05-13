@@ -7,6 +7,7 @@ import {NosAgencesComponent} from './layout/nos-agences/nos-agences.component'
 import { ListeClientsComponent } from './composants/Personnes/client-composants/liste-clients/liste-clients.component';
 import { CreateClientComponent } from './composants/Personnes/client-composants/create-client/create-client.component';
 import { ListeTerrainsComponent } from './composants/Biens/Terrains/terrain-composants/liste-terrains/liste-terrains.component';
+import { TerrainComponent } from './composants/Biens/Terrains/terrain-composants/terrain/terrain.component';
 const routes: Routes = [
   {path:"", redirectTo:"accueil", pathMatch:'full'}, // route par défaut - redirection
   {path:"accueil", component: AccueilComponent}, // accueil
@@ -17,7 +18,8 @@ const routes: Routes = [
   /* routes personnes */
   {path:"clientList", component: ListeClientsComponent},
   {path:"edit/:id", component: CreateClientComponent},
-  {path:"terrainList", component: ListeTerrainsComponent }
+  {path:"terrainList", component: ListeTerrainsComponent },
+  {path:"terrain/:id", component: TerrainComponent }
 /* ,
   {path:"**", component: AccueilComponent} */
 

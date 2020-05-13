@@ -30,7 +30,7 @@ import { ListeAgentsComponent } from './composants/Personnes/agent-composants/li
 import { AgentComponent } from './composants/Personnes/agent-composants/agent/agent.component';
 import {DonneesPersonnellesComponent} from './layout/donnees-personnelles/donnees-personnelles.component';
 import { CreateClientComponent } from './composants/Personnes/client-composants/create-client/create-client.component'
-
+import { TerrainComponent } from './composants/Biens/Terrains/terrain-composants/terrain/terrain.component'
 
 @NgModule({
   declarations: [
@@ -56,7 +56,8 @@ import { CreateClientComponent } from './composants/Personnes/client-composants/
     ListeAgentsComponent,
     AgentComponent,
     DonneesPersonnellesComponent,
-    CreateClientComponent
+    CreateClientComponent,
+    TerrainComponent
   ],
   imports: [
     HttpClientModule,
