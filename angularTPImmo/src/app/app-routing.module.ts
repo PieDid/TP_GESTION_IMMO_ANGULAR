@@ -6,6 +6,8 @@ import {DonneesPersonnellesComponent} from './layout/donnees-personnelles/donnee
 import {NosAgencesComponent} from './layout/nos-agences/nos-agences.component'
 import { ListeClientsComponent } from './composants/Personnes/client-composants/liste-clients/liste-clients.component';
 import { CreateClientComponent } from './composants/Personnes/client-composants/create-client/create-client.component';
+import { ListeAgentsComponent } from './composants/Personnes/agent-composants/liste-agents/liste-agents.component';
+import { CreateAgentComponent } from './composants/Personnes/agent-composants/create-agent/create-agent.component';
 import { ListeTerrainsComponent } from './composants/Biens/Terrains/terrain-composants/liste-terrains/liste-terrains.component';
 import { TerrainComponent } from './composants/Biens/Terrains/terrain-composants/terrain/terrain.component';
 const routes: Routes = [
@@ -17,7 +19,9 @@ const routes: Routes = [
 
   /* routes personnes */
   {path:"clientList", component: ListeClientsComponent},
-  {path:"edit/:id", component: CreateClientComponent},
+  {path:"clientEdit/:id", component: CreateClientComponent},
+  {path:"agentList", component: ListeAgentsComponent},
+  {path:"agentEdit/:id", component: CreateAgentComponent},
   {path:"terrainList", component: ListeTerrainsComponent },
   {path:"terrain/:id", component: TerrainComponent }
 /* ,

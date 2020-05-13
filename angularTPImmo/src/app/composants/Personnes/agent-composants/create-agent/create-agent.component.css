@@ -1,0 +1,21 @@
+
+
+.form-photo{
+    margin-left: 40%;
+    margin-right: 40%;
+    display: block;
+}
+
+/* bouton Enregistrer */
+.btn-save:hover{
+    color: goldenrod;
+    border-color: goldenrod;
+    border-radius: 5px;
+    border-width: 2px;
+}
+.btn-save{
+    color: black;
+    border-color: black;
+    border-radius: 5px;
+    border-width: 2px;
+}

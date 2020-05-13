@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-agent',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgentComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  
 
 }

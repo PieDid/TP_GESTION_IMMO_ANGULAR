@@ -74,7 +74,7 @@ export class ListeClientsComponent implements OnInit {
    * @param idClient
    */
   editClient(idClient: number) {
-    this.router.navigate(['edit/', idClient]);
+    this.router.navigate(['clientEdit/', idClient]);
   } //end editClient
 
   //méthode pour la gestion de l'aperçu des infos

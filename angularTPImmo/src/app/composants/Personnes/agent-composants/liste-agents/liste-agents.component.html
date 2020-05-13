@@ -1,1 +1,136 @@
-<p>liste-agents works!</p>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<div class="container" style="text-align: center; width: 1170px;">
+<div class="panel panel-primary" *ngFor="let a of agents" >
+
+   <!--  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./liste-clients.component.css"/>
+ -->
+    
+ 
+    <!-- ============================================== -->
+    <!-- =============== Body du panneau ============== -->
+    <!-- ============================================== -->
+    
+        <div class="panel-body">
+            <div>
+                <div class="row vertical-align">
+
+
+                    <table id="TableAgent">
+                        <tr style="font-weight: bold;">
+                            <!-- ++++++++ photo +++++++ -->
+                            <td rowspan="2" class="col-xs-1"><img class="imageClass" src="assets/images/trombi/{{a.photo}}"/></td>
+
+                            <!-- ++++++++ détails du client +++++++ -->
+                            <!-- _______ ID ______ -->
+                            <td>ID</td>
+
+                            <!-- _______ Nom ______ -->
+                            <td>Nom</td>
+
+                            <!-- _______ Email ______ -->
+                            <td>Email</td>
+
+                            <!-- _______ Adresse ______ -->
+                            <td *ngIf="previewInfos">Adresse</td>
+
+                            <!-- _______ Visites ______ -->
+                            <td *ngIf="previewInfos">Visites</td>
+
+                            <!-- _______ Contrats ______ -->
+                            <td *ngIf="previewInfos">Contrats</td>
+
+                            <!-- _______ Statut ______ -->
+                            <td>Statut</td>
+
+                            <!-- <td rowspan="2" >&oplus; d'infos</td> -->
+                        </tr>
+
+                        <tr>
+                            <!-- _______ ID ______ -->
+                            <td>{{a.identifiant}}</td>
+
+                            <!-- _______ Nom ______ -->
+                            <td>{{a.nom}}</td>
+
+                            <!-- _______ Email ______ -->
+                            <td>{{a.email}}</td>
+
+                            <!-- _______ Adresse ______ -->
+                            <td *ngIf="previewInfos">{{a.adresse}}</td>
+
+                            <!-- _______ Visites ______ -->
+                            <td *ngIf="previewInfos">{{a.liste_visites}}</td>
+
+                            <!-- _______ Contrats ______ -->
+                            <td *ngIf="previewInfos">{{a.liste_contrats}}</td>
+
+                            <!-- _______ Statut ______ -->
+                            <td *ngIf="a.statut as true; else elseBlock">Actif</td>
+                            <ng-template #elseBlock>Inactif</ng-template>
+                        </tr>
+                    </table>
+                      
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+    
+
+        <!-- ============================================== -->
+        <!-- ============== footer du panneau ============= -->
+        <!-- ============================================== -->
+        <div class="panel-footer">
+
+            <!-- bouton pour éditer -->
+            <button class="btn btn-editer" (click)="editAgent(a.identifiant)">
+            <!-- <button class="btn btn-editer" routerLink="/edit/{{c.idClient}}" > -->
+                Editer
+            </button> &nbsp;
+
+            <!-- bouton pour infos -->
+            <button class="btn btn-infos" (click)="toggleInfosPreview()">
+                {{ previewInfos ? "Θ d'infos" : "⊕ d'infos" }}
+            </button>
+
+            <!-- bouton pour supprimer -->
+            <button class="btn btn-supprimer" (click)="deleteAgent(a)">
+            <!-- <button class="btn btn-editer" routerLink="/edit/{{a.idAgent}}" > -->
+                Supprimer
+            </button>
+
+             <!-- bouton pour éditer -->
+            <!-- <button class="btn btn-primary" (click)="openModal(a)">
+                Infos
+            </button> -->
+        </div>
+
+    </div>
+    <!-- <div id="modal">
+        <h1>Liste des visites</h1>
+        <div *ngFor="let l_visites of liste_visites">
+            <td>ID : {{l_visites.id_visite}}</td>
+            <td>date : {{l_visites.date}}</td>
+            <td>heure : {{l_visites.heure}}</td>
+            <td>Bien_ID : {{l_visites.bien.id_bien}}</td>
+            <td>Agent_ID : {{l_visites.agent.identifiant}}</td>
+            <td>Client_ID : {{l_visites.client.identifiant}}</td>
+            <!-- <td>Propriétaire_ID : {{l_visites.propriétaire.identifiant}}</td> -->
+        <!-- </div>
+        <h1>Liste des contrats</h1>
+    </div>  -->
+
+    
+
+</div><!-- fin div container -->
+
+<div class="container" style="padding-right: 2%;">
+
+    <!-- bouton pour ajouter -->
+    <button class="btn btn-ajouter" (click)="editAgent(0)">
+        Λلouter
+    </button>
+
+</div>

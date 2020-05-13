@@ -29,8 +29,9 @@ import { ListeContratVenteComponent } from './composants/Contrats/contratVente-c
 import { ListeAgentsComponent } from './composants/Personnes/agent-composants/liste-agents/liste-agents.component';
 import { AgentComponent } from './composants/Personnes/agent-composants/agent/agent.component';
 import {DonneesPersonnellesComponent} from './layout/donnees-personnelles/donnees-personnelles.component';
-import { CreateClientComponent } from './composants/Personnes/client-composants/create-client/create-client.component'
-import { TerrainComponent } from './composants/Biens/Terrains/terrain-composants/terrain/terrain.component'
+import { CreateClientComponent } from './composants/Personnes/client-composants/create-client/create-client.component';
+import { CreateAgentComponent } from './composants/Personnes/agent-composants/create-agent/create-agent.component';
+import { TerrainComponent } from './composants/Biens/Terrains/terrain-composants/terrain/terrain.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { TerrainComponent } from './composants/Biens/Terrains/terrain-composants
     AgentComponent,
     DonneesPersonnellesComponent,
     CreateClientComponent,
+    CreateAgentComponent,
     TerrainComponent
   ],
   imports: [
