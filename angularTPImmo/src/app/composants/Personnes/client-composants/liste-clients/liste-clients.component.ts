@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../../../../services/client.service';
 import { IClient } from '../../../../modele/IClient';
 import { Router } from '@angular/router';
+import { AdressePersonneService } from '../../../../services/adresse-personne.service';
 
 @Component({
   selector: 'app-liste-clients',
@@ -22,7 +23,7 @@ export class ListeClientsComponent implements OnInit {
    *    -> injection du service ClientService comme dépendance
    *    -> injection du router pour la redirection
    */
-  constructor(private clientService : ClientService, private router : Router) { }
+  constructor(private clientService : ClientService, private adressePersonneService:AdressePersonneService, private router : Router) { }
 
   /**
    * appel de la méthode getAllClients() à l'initialisation du composant
@@ -42,7 +43,7 @@ export class ListeClientsComponent implements OnInit {
 
     //abonnement au service
     this.clientService.getAllClient().subscribe(
-      data => this.clients = data
+      data => {this.clients = data ; console.log(data);}
     );
   }
 

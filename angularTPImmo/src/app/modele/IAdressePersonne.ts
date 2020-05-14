@@ -6,6 +6,6 @@ import { IPersonne } from './IPersonne';
  */
 export interface IAdressePersonne extends IAdresse {
 
-    personne : IPersonne; 
+    /* personne : IPersonne;  */
 
 }

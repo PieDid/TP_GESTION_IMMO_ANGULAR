@@ -58,7 +58,7 @@ export class ListeAgentsComponent implements OnInit {
   /**
    * permet de naviguer vers 'edit/id' en ajoutant
    * l'id de l'agent à cette route
-   * @param idClient
+   * @param idAgent
    */
   editAgent(idAgent: number) {
     this.router.navigate(['agentEdit/', idAgent]);

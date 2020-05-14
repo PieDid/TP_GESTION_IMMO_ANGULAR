@@ -1,1 +1,160 @@
-<p>create-proprietaire works!</p>
+<!-- formulaire d'ajout d'un client -->
+
+<!--
+    > à la soumission du formulaire on va exécuter la méthode saveOrUpdateClient() du composant
+-->
+<div class="container">
+    <form #proprietaireForm="ngForm" (ngSubmit)="saveOrUpdateProprietaire()">
+        <!-- panneau - panel -->
+        <div class="panel panel-primary">
+    
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <!-- ++++++++++ head du panel +++++++++++ -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <div class="panel-heading">
+                <h3 class="panel-title">Ajout d'un nouvel proprietaire</h3>
+            </div>
+    
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <!-- ++++++++++ body du panel +++++++++++ -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <div class="panel-body">
+    
+    
+                 <!-- ____ input pour la photo ____ -->
+                <div class="form-group">
+                    <label for="p-img">Photo : </label>
+                    <input type="text" class="form-control" placeholder="saisir l'intitulé de la photo" id="p-img" name="photo" [(ngModel)]="proprietaire.photo" pattern="[a-z0-9._%+-]+\.[a-z]{3,}$">
+                </div>
+
+                <!-- ____ bouton pour l'aperçu de la photo ____ -->
+                <div class="form-group">
+                    <button type="button" (click)="togglePhotoPreview()" class="btn btn-light">
+                        {{ previewPhoto ? "Masquer" : "Afficher" }} l'aperçu si intitulé reconnu
+                    </button>
+                </div>
+
+                <!-- ____ aperçu de la photo ____ -->
+                <div class="form-photo">
+                    <input type="image" src="assets/images/trombi/{{proprietaire.photo}}" height="200" width="200" *ngIf="previewPhoto">
+                    <!-- <img src="assets/images/trombi/{{client.photo}}" height="200" width="200" *ngIf="previewPhoto"> -->
+                </div>
+
+                <!-- ____ Nom ____ -->
+                <div class="form-group">
+                    <label for="p-nom">Nom : </label>
+                    <input type="text" class="form-control" placeholder="saisir le nom" id="p-nom" name="nom" [(ngModel)]="proprietaire.nom">
+                </div>
+    
+                <!-- ____ Email ____ -->
+                <div class="form-group">
+                    <label for="email">Email : </label>
+                    <input type="email" class="form-control" placeholder="saisir l'email" id="email" name="email" [(ngModel)]="proprietaire.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                </div>
+                <!-- <div class="example-container">
+                    <mat-form-field appearance="fill">
+                      <mat-label>Entrez l'email</mat-label>
+                      <input matInput placeholder="pat@example.com" value={{client.email}} required>
+                      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                  </div> -->
+                  
+    
+                <!-- ____ MDP ____ -->
+                <div class="form-group">
+                    <label for="p-mdp">Mot de Passe : </label>
+                    <input type="password" class="form-control" placeholder="saisir le mot de passe" id="p-mdp" name="mdp" [(ngModel)]="proprietaire.motDePasse">
+                </div>
+                
+                  
+    
+                <!-- ____ Statut ____ -->
+                <div class="form-group">
+                    <label for="p-salaire">Statut : </label>
+                    <input type="text" class="form-control" placeholder="saisir le statut (true/false)" id="p-statut" name="statut" [(ngModel)]="proprietaire.statut">
+                </div>
+                <!-- <div class="statut-container">
+                    <form appearance="fill">
+                        <label>Statut :</label><br>
+                        <select [(ngModel)]="client.statut" id="statut">
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                        </select>
+                        <!-- <input type="text" class="form-control" placeholder="saisir le mot de passe" id="statut" name="statut" [(ngModel)]="client.statut"> -->
+                        <!-- <script>
+                            var selectElmt = document.getElementById("statut");
+                            var valeurselectionnee = selectElmt.options[selectElmt.selectedIndex].value;
+                            client.statut = valeurselectionnee;
+                        </script> -->
+                        <!-- <mat-hint >Here's the dropdown arrow ^</mat-hint> -->
+                    <!-- </form> 
+                </div> -->
+            <!-- <div class="example-container">
+                <mat-form-field appearance="fill">
+                    <mat-label>Select me</mat-label>
+                    <select mat-select>
+                      <mat-option value="true">Actif</mat-option>
+                      <mat-option value="false">Inactif</mat-option>
+                    </select>
+                    <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+                </mat-form-field>
+            </div> -->
+
+            
+            <!-- ____ Adresse ____ -->
+            <div class="form-group">
+                <label for="p-adresse">Adresse : </label>
+                <!-- <input type="text" class="form-control" placeholder="saisir l'adresse" id="p-adresse" name="adresse" [(ngModel)]="adresse"> -->
+                <input type="text" class="form-control" placeholder="saisir l'adresse" id="p-adresse" name="adresse" [(ngModel)]="proprietaire.adressePersonne">
+            </div>
+
+            <!-- ____ Tel Privé ____ -->
+            <div class="form-group">
+                <label for="p-telPrive">Tel Privé : </label>
+                <input type="text" class="form-control" placeholder="saisir le n° de téléphone" id="p-telPrive" name="telPrive" [(ngModel)]="proprietaire.tel_prive">
+            </div>
+
+            <!-- ____ Tel Travail ____ -->
+            <div class="form-group">
+                <label for="p-telTravail">Tel Privé : </label>
+                <input type="text" class="form-control" placeholder="saisir le n° de téléphone" id="p-telTravail" name="telTravail" [(ngModel)]="proprietaire.tel_travail">
+            </div>
+
+            <!-- ____ Biens ____ -->
+            <div class="form-group">
+                <label for="p-biens">Biens : </label>
+                <input type="text" class="form-control" placeholder="saisir liste de biens" id="p-biens" name="biens" [(ngModel)]="proprietaire.liste_biens">
+            </div>
+             liste_visites:null
+            <!-- ____ Contrats Ventes ____ -->
+            <div class="form-group">
+                <label for="p-CVentes">C. Ventes : </label>
+                <input type="text" class="form-control" placeholder="saisir liste des contrats" id="p-CVentes" name="CVentes" [(ngModel)]="proprietaire.liste_contratsVente">
+            </div>
+
+            <!-- ____ Contrats Locations ____ -->
+            <div class="form-group">
+                <label for="p-CLocations">C Locations : </label>
+                <input type="text" class="form-control" placeholder="saisir liste des locations" id="p-CLocations" name="CLocations" [(ngModel)]="proprietaire.liste_contratsLocation">
+            </div>
+
+            <!-- ____ Visites ____ -->
+            <div class="form-group">
+                <label for="p-visites">Visites : </label>
+                <input type="text" class="form-control" placeholder="saisir liste des visites" id="p-visites" name="visites" [(ngModel)]="proprietaire.liste_visites">
+            </div>
+    
+    
+            </div>
+    
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <!-- ++++++++++ footer du panel +++++++++++ -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <div class="panel-footer">
+                <button class="btn btn-save btn-save">Enregistrer</button>
+            </div>
+    
+        </div>
+    </form>
+    
+    </div>
