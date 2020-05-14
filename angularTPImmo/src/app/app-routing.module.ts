@@ -25,6 +25,10 @@ import { LoginComponent } from './composants/login/login.component';
 import { RegisterComponent } from './composants/register/register.component';
 import { ProfileComponent } from './composants/profile/profile.component';
 import { BoardAdminComponent } from './composants/board-admin/board-admin.component';
+import { ListeBureauxComponent } from './composants/Biens/Commerciaux/bureau-composants/liste-bureaux/liste-bureaux.component';
+import { CreateBureauComponent } from './composants/Biens/Commerciaux/bureau-composants/create-bureau/create-bureau.component';
+
+
 
 const routes: Routes = [
   {path:"", redirectTo:"accueil", pathMatch:'full'}, // route par défaut - redirection
@@ -42,6 +46,8 @@ const routes: Routes = [
   {path:"proprietaireEdit/:id", component: CreateProprietaireComponent},
   {path:"administrateurList", component: ListeAdministrateursComponent},
   {path:"administrateurEdit/:id", component: CreateAdministrateurComponent},
+
+  /* routes biens */
   {path:"terrainList", component: ListeTerrainsComponent },
   {path:"terrain/:id", component: CreateTerrainComponent },
   {path:"maisonList", component: ListeMaisonsComponent },
@@ -50,8 +56,10 @@ const routes: Routes = [
   {path:"appartement/:id", component: CreateAppartementComponent },
   {path:"studioList", component: ListeStudiosComponent },
   {path:"studio/:id", component: CreateStudioComponent },
+  {path:"bureauList", component: ListeBureauxComponent },
+  {path:"bureau/:id", component: CreateBureauComponent },
 
-  /* routes sercurité */
+  /* routes securité */
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },

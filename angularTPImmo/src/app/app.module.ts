@@ -46,6 +46,8 @@ import { BoardAgentComponent } from './composants/board-agent/board-agent.compon
 import { BoardLocComponent } from './composants/board-loc/board-loc.component';
 import { BoardPropComponent } from './composants/board-prop/board-prop.component';
 import { BoardClientComponent } from './composants/board-client/board-client.component';
+import { CreateBureauComponent } from './composants/Biens/Commerciaux/bureau-composants/create-bureau/create-bureau.component';
+
 
 @NgModule({
   declarations: [
@@ -90,7 +92,7 @@ import { BoardClientComponent } from './composants/board-client/board-client.com
     BoardLocComponent,
     BoardPropComponent,
     BoardClientComponent,
-    
+    CreateBureauComponent
   ],
   imports: [
     HttpClientModule,
