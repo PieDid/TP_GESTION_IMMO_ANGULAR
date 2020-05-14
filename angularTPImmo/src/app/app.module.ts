@@ -50,6 +50,11 @@ import { CreateBureauComponent } from './composants/Biens/Commerciaux/bureau-com
 import { CreateCommerceComponent } from './composants/Biens/Commerciaux/commerce-composants/create-commerce/create-commerce.component';
 import { CreateEntrepotComponent } from './composants/Biens/Commerciaux/entrepot-composants/create-entrepot/create-entrepot.component';
 import { AuthInterceptor } from './helpers/auth.interceptor';
+import { ListeVisitesComponent } from './composants/Visite/visites-composants/liste-visites/liste-visites.component';
+import { CreateVisiteComponent } from './composants/Visite/visites-composants/create-visite/create-visite.component';
+import { CreateAdresseBienComponent } from './composants/Adresses/adresseBien-composants/create-adresse-bien/create-adresse-bien.component';
+
+
 
 
 @NgModule({
@@ -97,7 +102,10 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
     BoardClientComponent,
     CreateBureauComponent,
     CreateCommerceComponent,
-    CreateEntrepotComponent
+    CreateEntrepotComponent,
+    ListeVisitesComponent,
+    CreateVisiteComponent,
+    CreateAdresseBienComponent
   ],
   imports: [
     HttpClientModule,

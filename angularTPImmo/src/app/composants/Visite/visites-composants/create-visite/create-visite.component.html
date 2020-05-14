@@ -1,0 +1,69 @@
+<!-- formulaire d'ajout d'une visite -->
+
+<div class="container">
+    <form #visiteForm="ngForm" (ngSubmit)="saveOrUpdateVisite()">
+        
+        <div class="panel panel-primary">
+    
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <!-- ++++++++++ head du panel +++++++++++ -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <div class="panel-heading">
+                <h3 class="panel-title">Ajout d'une nouvelle visite</h3>
+            </div>
+    
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <!-- ++++++++++ body du panel +++++++++++ -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <div class="panel-body">
+
+                <!-- ____ Date ____ -->
+                <div class="form-group">
+                    <label for="p-date">Date : </label>
+                    <input type="text" class="form-control" placeholder="Saisir la date de la visite" id="p-date" name="date" [(ngModel)]="visite.date">
+                </div>
+    
+                <!-- ____ Heure ____ -->
+                <div class="form-group">
+                    <label for="p-heure">Horaire : </label>
+                    <input type="text" class="form-control" placeholder="Saisir l'horaire de la visite" id="p-heure" name="heure" [(ngModel)]="visite.heure">
+                </div>
+                  
+                <!-- ____ Bien ____ -->
+                <div class="form-group">
+                    <label for="p-bien">Lieu : </label>
+                    <input type="text" class="form-control" placeholder="Saisir le lieu de la visite" id="p-bien" name="bien" [(ngModel)]="visite.bien">
+                </div>
+
+                <!-- ____ Agent ____ -->
+                <div class="form-group">
+                    <label for="p-agent">Agent : </label>
+                    <input type="text" class="form-control" placeholder="Saisir le nom de l'agent chargé de la visite" id="p-agent" name="agent" [(ngModel)]="visite.agent">
+                </div>
+
+                <!-- ____ Client ____ -->
+                <div class="form-group">
+                    <label for="p-client">Client : </label>
+                    <input type="text" class="form-control" placeholder="Saisir le nom du visiteur" id="p-client" name="client" [(ngModel)]="visite.client">
+                </div>
+
+                <!-- ____ Propriétaire ____ -->
+                <div class="form-group">
+                    <label for="p-proprietaire">Propriétaire : </label>
+                    <input type="text" class="form-control" placeholder="Saisir le nom du propriétaire" id="p-proprietaire" name="proprietaire" [(ngModel)]="visite.proprietaire">
+                </div>
+          
+
+            </div>
+    
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <!-- ++++++++++ footer du panel +++++++++++ -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <div class="panel-footer">
+                <button class="btn btn-save btn-save">Enregistrer</button>
+            </div>
+    
+        </div>
+    </form>
+    
+    </div>

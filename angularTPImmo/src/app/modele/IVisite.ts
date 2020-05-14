@@ -14,6 +14,6 @@ export interface IVisite {
     bien : IBien;
     agent : IAgent;
     client : IClient;
-    propriétaire : IProprietaire; 
+    proprietaire : IProprietaire; 
 
 }

@@ -31,7 +31,10 @@ import { ListeCommercesComponent } from './composants/Biens/Commerciaux/commerce
 import { CreateCommerceComponent } from './composants/Biens/Commerciaux/commerce-composants/create-commerce/create-commerce.component';
 import { ListeEntrepotsComponent } from './composants/Biens/Commerciaux/entrepot-composants/liste-entrepots/liste-entrepots.component';
 import { CreateEntrepotComponent } from './composants/Biens/Commerciaux/entrepot-composants/create-entrepot/create-entrepot.component';
-
+import { ListeVisitesComponent } from './composants/Visite/visites-composants/liste-visites/liste-visites.component';
+import { CreateVisiteComponent } from './composants/Visite/visites-composants/create-visite/create-visite.component';
+import { CreateAdresseBienComponent } from './composants/Adresses/adresseBien-composants/create-adresse-bien/create-adresse-bien.component';
+import { ListeAdresseBienComponent } from './composants/Adresses/adresseBien-composants/liste-adresse-bien/liste-adresse-bien.component';
 
 
 const routes: Routes = [
@@ -66,6 +69,13 @@ const routes: Routes = [
   {path:"commerce/:id", component: CreateCommerceComponent },
   {path:"entrepotList", component: ListeEntrepotsComponent },
   {path:"entrepot/:id", component: CreateEntrepotComponent },
+
+  /* autres routes */
+
+  {path:"adresseBienList", component: ListeAdresseBienComponent },
+  {path:"adresseBien/:id", component: CreateAdresseBienComponent },  
+  {path:"visiteList", component: ListeVisitesComponent },
+  {path:"visite/:id", component: CreateVisiteComponent },
 
   /* routes securité */
   { path: 'home', component: HomeComponent },

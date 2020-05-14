@@ -12,12 +12,12 @@
 
 
 /* css pour la table */
-#TableABien { 
+#TableVisite { 
     width: 100%;
     border-collapse: collapse;
   }
 
-#TableABien td{
+#TableVisite td{
     text-align: center;
 }
 

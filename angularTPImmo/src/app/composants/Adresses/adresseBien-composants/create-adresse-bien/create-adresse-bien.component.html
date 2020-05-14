@@ -1,0 +1,56 @@
+<!-- formulaire d'ajout d'une visite -->
+
+<div class="container">
+    <form #visiteForm="ngForm" (ngSubmit)="saveOrUpdateAdresseBien()">
+        
+        <div class="panel panel-primary">
+    
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <!-- ++++++++++ head du panel +++++++++++ -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <div class="panel-heading">
+                <h3 class="panel-title">Ajout d'une nouvelle adresse d'un bien immobilier</h3>
+            </div>
+    
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <!-- ++++++++++ body du panel +++++++++++ -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <div class="panel-body">
+
+                <!-- ____ Rue ____ -->
+                <div class="form-group">
+                    <label for="p-rue">Adresse : </label>
+                    <input type="text" class="form-control" placeholder="Saisir l'adresse du bien immobilier" id="p-rue" name="rue" [(ngModel)]="adresseBien.rue">
+                </div>
+    
+                <!-- ____ Code Postal ____ -->
+                <div class="form-group">
+                    <label for="p-codePostal">Code Postal : </label>
+                    <input type="text" class="form-control" placeholder="Saisir le code postal de l'adresse" id="p-codePostal" name="codePostal" [(ngModel)]="adresseBien.codePostal">
+                </div>
+
+                <!-- ____ Ville ____ -->
+                <div class="form-group">
+                    <label for="p-ville">Ville : </label>
+                    <input type="text" class="form-control" placeholder="Saisir la ville de l'adresse" id="p-ville" name="ville" [(ngModel)]="adresseBien.ville">
+                </div>
+                  
+                <!-- ____ Bien ____ -->
+                <div class="form-group">
+                    <label for="p-bien">Numéro du Bien Immobilier : </label>
+                    <input type="text" class="form-control" placeholder="Saisir le numéro du bien immobilier" id="p-bien" name="bien" [(ngModel)]="adresseBien.bien">
+                </div>
+
+            </div>
+    
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <!-- ++++++++++ footer du panel +++++++++++ -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <div class="panel-footer">
+                <button class="btn btn-save btn-save">Enregistrer</button>
+            </div>
+    
+        </div>
+    </form>
+    
+    </div>

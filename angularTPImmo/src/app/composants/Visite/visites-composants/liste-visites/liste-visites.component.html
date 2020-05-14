@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <div class="container" style="text-align: center; width: 1170px;">
-<div class="panel panel-primary" *ngFor="let a of adresseBien" >
+<div class="panel panel-primary" *ngFor="let v of visites" >
 
  
     <!-- ============================================== -->
@@ -12,42 +12,55 @@
                 <div class="row vertical-align">
 
 
-                    <table id="TableABien">
+                    <table id="TableVisite">
                         <tr style="font-weight: bold;">
                            
                             <!-- _______ ID ______ -->
                             <td>ID</td>
 
-                            <!-- _______ Rue ______ -->
-                            <td>Adresse</td>
+                            <!-- _______ Date ______ -->
+                            <td>Date</td>
 
-                            <!-- _______ Code Postal ______ -->
-                            <td>Code Postal</td>
-
-                            <!-- _______ Ville ______ -->
-                            <td>Ville</td>
+                            <!-- _______ Heure ______ -->
+                            <td>Horaire</td>
 
                             <!-- _______ Bien ______ -->
                             <td *ngIf="previewInfos">Bien Immobilier</td>
 
-                            
+                            <!-- _______ Agent ______ -->
+                            <td *ngIf="previewInfos">Agent</td>
+
+                            <!-- _______ Client ______ -->
+                            <td *ngIf="previewInfos">Client</td>
+
+                            <!-- _______ Propriétaire ______ -->
+                            <td *ngIf="previewInfos">Propriétaire</td>
+
+                            <!-- <td rowspan="2" >&oplus; d'infos</td> -->
                         </tr>
 
                         <tr>
                             <!-- _______ ID ______ -->
-                            <td>{{a.idAdresse}}</td>
+                            <td>{{v.id_visite}}</td>
 
-                            <!-- _______ Rue ______ -->
-                            <td>{{a.rue}}</td>
+                            <!-- _______ Date ______ -->
+                            <td>{{v.date}}</td>
 
-                            <!-- _______ Code Postal ______ -->
-                            <td>{{a.codePostal}}</td>
-
-                            <!-- _______ Ville ______ -->
-                            <td>{{a.ville}}</td>
+                            <!-- _______ Heure ______ -->
+                            <td>{{v.heure}}</td>
 
                             <!-- _______ Bien ______ -->
-                            <td *ngIf="previewInfos">{{a.bien}}</td>
+                            <td *ngIf="previewInfos">{{v.bien}}</td>
+
+                            <!-- _______ Agent ______ -->
+                            <td *ngIf="previewInfos">{{v.agent}}</td>
+
+                            <!-- _______ CLient ______ -->
+                            <td *ngIf="previewInfos">{{v.client}}</td>
+
+                            <!-- _______ Propriétaire ______ -->
+                            <td *ngIf="previewInfos">{{v.proprietaire}}</td>
+
                             
                         </tr>
                     </table>
@@ -63,7 +76,7 @@
         <div class="panel-footer">
 
             <!-- bouton pour éditer -->
-            <button class="btn btn-editer" (click)="editAdresseBien(a.idAdresse)">
+            <button class="btn btn-editer" (click)="editVisite(v.id_visite)">
                 Modifier
             </button> &nbsp;
 
@@ -73,7 +86,7 @@
             </button>
 
             <!-- bouton pour supprimer -->
-            <button class="btn btn-supprimer" (click)="deleteAdresseBien(a)">
+            <button class="btn btn-supprimer" (click)="deleteVisite(v)">
                 Supprimer
             </button>
         </div>
@@ -85,7 +98,7 @@
 <div class="container" style="padding-right: 2%;">
 
     <!-- bouton pour ajouter -->
-    <button class="btn btn-ajouter" (click)="editAdresseBien(0)">
+    <button class="btn btn-ajouter" (click)="editVisite(0)">
         Λلouter
     </button>
 
