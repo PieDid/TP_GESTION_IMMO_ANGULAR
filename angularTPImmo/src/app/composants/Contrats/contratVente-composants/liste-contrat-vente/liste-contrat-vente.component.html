@@ -1,1 +1,114 @@
-<p>liste-contrat-vente works!</p>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<div class="container" style="text-align: center; width: 1170px;">
+    <div class="panel panel-primary" *ngFor="let c of contratVentes">
+
+
+        <!-- ============================================== -->
+        <!-- =============== Body du panneau ============== -->
+        <!-- ============================================== -->
+
+        <div class="panel-body">
+            <div>
+                <div class="row vertical-align">
+
+                    <table id="TableContratVente">
+                        <tr style="font-weight: bold;">
+
+                            <!-- ++++++++ détails du client +++++++ -->
+                            <!-- _______ ID ______ -->
+                            <td>ID</td>
+
+                            <!-- _______ Nom ______ -->
+                            <td>Date</td>
+
+                            <!-- _______ Bien ______ -->
+                            <td *ngIf="previewInfos">Bien</td>
+
+                            <!-- _______ Agent ______ -->
+                            <td *ngIf="previewInfos">Agent</td>
+
+                            <!-- _______ Proprietaire ______ -->
+                            <td *ngIf="previewInfos">proprietaire</td>
+
+                            <!-- _______ Clients ______ -->
+                            <td *ngIf="previewInfos">Client</td>
+
+                            <!-- _______ Prix ______ -->
+                            <td>Prix</td>
+
+                            <!-- _______ Etat ______ -->
+                            <td>Etat</td>
+
+                            
+
+                            <!-- <td rowspan="2" >&oplus; d'infos</td> -->
+                        </tr>
+
+                        <tr>
+                            <!-- _______ ID ______ -->
+                            <td>{{c.idContrat}}</td>
+
+                            <!-- _______ Date ______ -->
+                            <td>{{c.date}}</td>
+
+                            <!-- _______ Bine ______ -->
+                            <td *ngIf="previewInfos">{{c.bien}}</td>
+
+                            <!-- _______ Agent ______ -->
+                            <td *ngIf="previewInfos">{{c.agent}}</td>
+
+                            <!-- _______ Proprietaire ______ -->
+                            <td *ngIf="previewInfos">{{c.proprietaire}}</td>
+
+                            <!-- _______ Client ______ -->
+                            <td *ngIf="previewInfos">{{c.client}}</td>
+
+                             <!-- _______ Prix ______ -->
+                             <td>{{c.prix}}</td>
+
+                             <!-- _______ Etat ______ -->
+                             <td>{{c.etat}}</td>
+
+                            
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ============================================== -->
+        <!-- ============== footer du panneau ============= -->
+        <!-- ============================================== -->
+        <div class="panel-footer">
+
+            <!-- bouton pour éditer -->
+            <button class="btn btn-editer" (click)="editContratVente(c.idCaution)">
+                Editer
+            </button> &nbsp;
+
+            <!-- bouton pour infos -->
+            <button class="btn btn-infos" (click)="toggleInfosPreview()">
+                {{ previewInfos ? "Θ d'infos" : "⊕ d'infos" }}
+            </button>
+
+            <!-- bouton pour supprimer -->
+            <button class="btn btn-supprimer" (click)="deleteContratVente(c)">
+                Supprimer
+            </button>
+
+        </div>
+
+    </div>
+
+</div><!-- fin div container -->
+
+<div class="container" style="padding-right: 2%;">
+
+    <!-- bouton pour ajouter -->
+    <button class="btn btn-ajouter" (click)="editContratVente(0)">
+        Ajouter
+    </button>
+
+</div>

@@ -1,1 +1,129 @@
-<p>liste-contrat-location works!</p>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<div class="container" style="text-align: center; width: 1170px;">
+    <div class="panel panel-primary" *ngFor="let c of contratLocations">
+
+
+        <!-- ============================================== -->
+        <!-- =============== Body du panneau ============== -->
+        <!-- ============================================== -->
+
+        <div class="panel-body">
+            <div>
+                <div class="row vertical-align">
+
+                    <table id="TableContratLocation">
+                        <tr style="font-weight: bold;">
+
+                            <!-- ++++++++ détails du client +++++++ -->
+                            <!-- _______ ID ______ -->
+                            <td>ID</td>
+
+                            <!-- _______ Nom ______ -->
+                            <td>Date</td>
+
+                            <!-- _______ Bien ______ -->
+                            <td *ngIf="previewInfos">Bien</td>
+
+                            <!-- _______ Agent ______ -->
+                            <td *ngIf="previewInfos">Agent</td>
+
+                            <!-- _______ Proprietaire ______ -->
+                            <td *ngIf="previewInfos">proprietaire</td>
+
+                            <!-- _______ Clients ______ -->
+                            <td *ngIf="previewInfos">Client</td>
+
+                            <!-- _______ Loyer ______ -->
+                            <td>Loyer</td>
+
+                            <!-- _______ Charge ______ -->
+                            <td>Charges</td>
+
+                            <!-- _______ Caution ______ -->
+                            <td>Caution</td>
+
+                            <!-- _______ Type de Bail ______ -->
+                            <td>Type de Bail</td>
+
+                            <!-- _______ Garniture ______ -->
+                            <td>Garniture</td>
+
+                            <!-- <td rowspan="2" >&oplus; d'infos</td> -->
+                        </tr>
+
+                        <tr>
+                            <!-- _______ ID ______ -->
+                            <td>{{c.idContrat}}</td>
+
+                            <!-- _______ Date ______ -->
+                            <td>{{c.date}}</td>
+
+                            <!-- _______ Bine ______ -->
+                            <td *ngIf="previewInfos">{{c.bien}}</td>
+
+                            <!-- _______ Agent ______ -->
+                            <td *ngIf="previewInfos">{{c.agent}}</td>
+
+                            <!-- _______ Proprietaire ______ -->
+                            <td *ngIf="previewInfos">{{c.proprietaire}}</td>
+
+                            <!-- _______ Client ______ -->
+                            <td *ngIf="previewInfos">{{c.client}}</td>
+
+                             <!-- _______ Loyer ______ -->
+                             <td>{{c.loyer}}</td>
+
+                             <!-- _______ Charges ______ -->
+                             <td>{{c.charge}}</td>
+
+                             <!-- _______ Caution ______ -->
+                             <td>{{c.caution}}</td>
+
+                             <!-- _______ TypeBail ______ -->
+                             <td>{{c.typeBail}}</td>
+
+                             <!-- _______ Garniture ______ -->
+                             <td>{{c.garniture}}</td>
+                            
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ============================================== -->
+        <!-- ============== footer du panneau ============= -->
+        <!-- ============================================== -->
+        <div class="panel-footer">
+
+            <!-- bouton pour éditer -->
+            <button class="btn btn-editer" (click)="editContratLocation(c.idCaution)">
+                Editer
+            </button> &nbsp;
+
+            <!-- bouton pour infos -->
+            <button class="btn btn-infos" (click)="toggleInfosPreview()">
+                {{ previewInfos ? "Θ d'infos" : "⊕ d'infos" }}
+            </button>
+
+            <!-- bouton pour supprimer -->
+            <button class="btn btn-supprimer" (click)="deleteContratLocation(c)">
+                Supprimer
+            </button>
+
+        </div>
+
+    </div>
+
+</div><!-- fin div container -->
+
+<div class="container" style="padding-right: 2%;">
+
+    <!-- bouton pour ajouter -->
+    <button class="btn btn-ajouter" (click)="editContratLocation(0)">
+        Ajouter
+    </button>
+
+</div>

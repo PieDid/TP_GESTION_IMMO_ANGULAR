@@ -111,6 +111,35 @@
                     </div>
                 </div>
             </li>
+
+            <!-- Autre -->
+            <li ngbDropdown class="">
+                <a href (click)="false" class="nav-link" ngbDropdownToggle>Autres</a>
+                <div ngbDropdownMenu class="DropdownMenu">
+                    <div >
+                        <a class="nav-link" [routerLink]="['contratLocationList']"
+                            [routerLinkActive]="['active','decoration']">Contrat de Location</a>
+                    </div>
+                    <div>
+                        <a class="nav-link" [routerLink]="['contratVenteList']"
+                            [routerLinkActive]="['active','decoration']">Contrat de Vente</a>
+                    </div>
+                    <div>
+                        <a class="nav-link" [routerLink]="['visiteList']"
+                            [routerLinkActive]="['active','decoration']">Visite</a>
+                    </div>
+                    <div>
+                        <a class="nav-link" [routerLink]="['adresseBienList']"
+                            [routerLinkActive]="['active','decoration']">Adresse des bien</a>
+                    </div>
+                    <div>
+                        <a class="nav-link" [routerLink]="['adressePersonneList']"
+                            [routerLinkActive]="['active','decoration']">Adresse des personnes</a>
+                    </div>
+                
+                </div>
+            </li>
+
         </div>
        
     </nav>

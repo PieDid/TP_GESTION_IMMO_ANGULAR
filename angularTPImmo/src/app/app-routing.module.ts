@@ -35,7 +35,10 @@ import { ListeVisitesComponent } from './composants/Visite/visites-composants/li
 import { CreateVisiteComponent } from './composants/Visite/visites-composants/create-visite/create-visite.component';
 import { CreateAdresseBienComponent } from './composants/Adresses/adresseBien-composants/create-adresse-bien/create-adresse-bien.component';
 import { ListeAdresseBienComponent } from './composants/Adresses/adresseBien-composants/liste-adresse-bien/liste-adresse-bien.component';
-
+import { ListeContratLocationComponent } from 'src/app/composants/Contrats/contratLocation-composants/liste-contrat-location/liste-contrat-location.component'
+import { CreateContratLocationComponent } from 'src/app/composants/Contrats/contratLocation-composants/create-contrat-location/create-contrat-location.component'
+import { ListeContratVenteComponent } from 'src/app/composants/Contrats/contratVente-composants/liste-contrat-vente/liste-contrat-vente.component'
+import { CreateContratVenteComponent } from 'src/app/composants/Contrats/contratVente-composants/create-contrat-vente/create-contrat-vente.component'
 
 const routes: Routes = [
   {path:"", redirectTo:"accueil", pathMatch:'full'}, // route par défaut - redirection
@@ -76,6 +79,10 @@ const routes: Routes = [
   {path:"adresseBien/:id", component: CreateAdresseBienComponent },  
   {path:"visiteList", component: ListeVisitesComponent },
   {path:"visite/:id", component: CreateVisiteComponent },
+  {path:"contratLocationList", component: ListeContratLocationComponent },
+  {path:"contratLocation/:id", component: CreateContratLocationComponent},
+  {path:"contratVenteList", component: ListeContratVenteComponent },
+  {path:"contratVente/:id", component: CreateContratVenteComponent},
 
   /* routes securité */
   { path: 'home', component: HomeComponent },
