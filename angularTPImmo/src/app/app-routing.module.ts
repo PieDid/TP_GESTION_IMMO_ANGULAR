@@ -9,7 +9,13 @@ import { CreateClientComponent } from './composants/Personnes/client-composants/
 import { ListeAgentsComponent } from './composants/Personnes/agent-composants/liste-agents/liste-agents.component';
 import { CreateAgentComponent } from './composants/Personnes/agent-composants/create-agent/create-agent.component';
 import { ListeTerrainsComponent } from './composants/Biens/Terrains/terrain-composants/liste-terrains/liste-terrains.component';
-import { TerrainComponent } from './composants/Biens/Terrains/terrain-composants/terrain/terrain.component';
+import { CreateTerrainComponent } from './composants/Biens/Terrains/terrain-composants/create-terrain/create-terrain.component';
+import { ListeMaisonsComponent } from './composants/Biens/Habitations/maison-composants/liste-maisons/liste-maisons.component';
+import { CreateMaisonComponent } from './composants/Biens/Habitations/maison-composants/create-maison/create-maison.component';
+import { ListeAppartementsComponent } from './composants/Biens/Habitations/appartement-composants/liste-appartements/liste-appartements.component';
+import { CreateAppartementComponent} from './composants/Biens/Habitations/appartement-composants/create-appartement/create-appartement.component';
+import { ListeStudiosComponent } from './composants/Biens/Habitations/studio-composants/liste-studios/liste-studios.component';
+import { CreateStudioComponent} from './composants/Biens/Habitations/studio-composants/create-studio/create-studio.component';
 import { ListeProprietairesComponent } from './composants/Personnes/proprietaire-composants/liste-proprietaires/liste-proprietaires.component';
 import { CreateProprietaireComponent } from './composants/Personnes/proprietaire-composants/create-proprietaire/create-proprietaire.component';
 import { ListeAdministrateursComponent } from './composants/Personnes/administrateur-composants/liste-administrateurs/liste-administrateurs.component';
@@ -37,7 +43,13 @@ const routes: Routes = [
   {path:"administrateurList", component: ListeAdministrateursComponent},
   {path:"administrateurEdit/:id", component: CreateAdministrateurComponent},
   {path:"terrainList", component: ListeTerrainsComponent },
-  {path:"terrain/:id", component: TerrainComponent },
+  {path:"terrain/:id", component: CreateTerrainComponent },
+  {path:"maisonList", component: ListeMaisonsComponent },
+  {path:"maison/:id", component: CreateMaisonComponent },
+  {path:"appartementList", component: ListeAppartementsComponent },
+  {path:"appartement/:id", component: CreateAppartementComponent },
+  {path:"studioList", component: ListeStudiosComponent },
+  {path:"studio/:id", component: CreateStudioComponent },
 
   /* routes sercurité */
   { path: 'home', component: HomeComponent },

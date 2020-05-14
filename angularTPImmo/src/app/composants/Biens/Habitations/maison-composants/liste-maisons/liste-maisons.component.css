@@ -1,0 +1,96 @@
+/* panneau */
+.container{
+    margin: 0 auto;
+}
+
+.panel{
+    border: goldenrod solid 2px;
+    width: 45%;
+    display: inline-block;
+    margin: 10px 2.5%;
+    text-align: center;
+    border-radius: 12px;
+
+}
+
+/* tete du panneau */
+.panel-heading{
+    padding-top: 0%;
+    height: 40px;
+    background-color: black;
+    color: silver;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: solid 1px white;
+    
+}
+
+/* corps du panneau */
+.panel-body{
+    background-image: url("/assets/images/Bien/Maison_1_1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgb(47, 47, 47);
+    height: 200px;
+}
+
+/* pied du panneau */
+.panel-footer{
+    background-color: black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: 0 auto;
+}
+
+/* prix */
+.panel-price{
+    vertical-align: center;
+    color: goldenrod;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+button{
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    color: goldenrod;
+    border: 2px solid goldenrod;
+}
+
+button:hover{
+    background-color:goldenrod;
+    color: black;
+}
+
+
+/* sTYLE RATING */
+
+.panel-rating{
+   padding-left: 55%;
+}
+
+.star {
+    font-size: 20pt;
+    color: #b0c4de;
+  }
+
+.filled {
+    color: green;
+  }
+.bad {
+    color: #b0c4de;
+  }
+
+.perfect{
+    color: #b0c4de;
+}
+
+.filled.perfect {
+      color: goldenrod;
+  }
+
+.filled.bad {
+    color: red;
+  }

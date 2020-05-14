@@ -2,9 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 //import de HttpClientModule :
 import { HttpClientModule } from '@angular/common/http';
-
 import {FormsModule} from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -31,11 +29,14 @@ import { AgentComponent } from './composants/Personnes/agent-composants/agent/ag
 import {DonneesPersonnellesComponent} from './layout/donnees-personnelles/donnees-personnelles.component';
 import { CreateClientComponent } from './composants/Personnes/client-composants/create-client/create-client.component';
 import { CreateAgentComponent } from './composants/Personnes/agent-composants/create-agent/create-agent.component';
-import { TerrainComponent } from './composants/Biens/Terrains/terrain-composants/terrain/terrain.component';
+import { CreateTerrainComponent } from './composants/Biens/Terrains/terrain-composants/create-terrain/create-terrain.component';
 import { ListeProprietairesComponent } from './composants/Personnes/proprietaire-composants/liste-proprietaires/liste-proprietaires.component';
 import { CreateProprietaireComponent } from './composants/Personnes/proprietaire-composants/create-proprietaire/create-proprietaire.component';
 import { ListeAdministrateursComponent } from './composants/Personnes/administrateur-composants/liste-administrateurs/liste-administrateurs.component';
 import { CreateAdministrateurComponent } from './composants/Personnes/administrateur-composants/create-administrateur/create-administrateur.component';
+import { CreateMaisonComponent } from './composants/Biens/Habitations/maison-composants/create-maison/create-maison.component';
+import { CreateAppartementComponent } from './composants/Biens/Habitations/appartement-composants/create-appartement/create-appartement.component';
+import { CreateStudioComponent } from './composants/Biens/Habitations/studio-composants/create-studio/create-studio.component';
 import { LoginComponent } from './composants/login/login.component';
 import { RegisterComponent } from './composants/register/register.component';
 import { HomeComponent } from './composants/home/home.component';
@@ -72,7 +73,10 @@ import { BoardClientComponent } from './composants/board-client/board-client.com
     DonneesPersonnellesComponent,
     CreateClientComponent,
     CreateAgentComponent,
-    TerrainComponent,
+    CreateTerrainComponent,
+    CreateMaisonComponent,
+    CreateAppartementComponent,
+    CreateStudioComponent,
     ListeProprietairesComponent,
     CreateProprietaireComponent,
     ListeAdministrateursComponent,
@@ -85,14 +89,15 @@ import { BoardClientComponent } from './composants/board-client/board-client.com
     BoardAgentComponent,
     BoardLocComponent,
     BoardPropComponent,
-    BoardClientComponent
+    BoardClientComponent,
+    
   ],
   imports: [
     HttpClientModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

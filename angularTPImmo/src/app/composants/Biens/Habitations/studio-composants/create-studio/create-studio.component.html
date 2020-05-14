@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<div class="container">
+
+    <!-- <div *ngFor = "let p of studio.listePhoto">
+        <p>Photo :  {{p.id_photo}}</p>
+    </div>
+
+    <div class="carroussel">
+
+        <ngb-carousel class="carroussel">
+-->
+            <!-- studios  -->
+            <!-- ng-template ngbSlide  *ngFor = "let p of studio.listePhoto" > -->
+                <!-- image -->
+                <!-- <div class="picsum-img-wrapper">
+                    <img [src]="p.photo" alt="photos">
+                </div>
+            </ng-template> -->
+        
+
+        <!-- </ngb-carousel>
+
+    </div>  -->
+
+    <div class="infos">
+
+
+        <form #studioForm="ngForm" (ngSubmit)="saveOrUpdateStudio()">
+
+            <div class="form-group col-md-6">
+                <label for="p-statut">Statut de la studio (true si libre, false si occupé): </label>
+                <input type="text" class="form-control" placeholder="Statut du bien" id="p-statut" name="statut"
+                    [(ngModel)]="studio.statut" />
+            </div><!-- end div input statut -->
+
+            <div class="form-group col-md-6">
+                <label for="p-offre">Offre : </label>
+                <input type="text" class="form-control" placeholder="Offre proposée (€)" id="p-offre" name="offre"
+                    [(ngModel)]="studio.offre" />
+            </div><!-- end div input offre -->
+
+            <div class="form-group col-md-6">
+                <label for="p-prix">Prix : </label>
+                <input type="text" class="form-control" placeholder="Prix du studio (€)" id="p-prix" name="prix"
+                    [(ngModel)]="studio.prix" />
+            </div><!-- end div input prix -->
+
+
+            <div class="form-group col-md-6">
+                <label for="p-standard">Standard : </label>
+                <input type="text" class="form-control" placeholder="Standard (1-5)"  id="p-standard"
+                 name="standard" [(ngModel)]="studio.standard" pattern="[1-5]{1}"/>
+            </div><!-- end div input standard -->
+
+            <div class="form-group col-md-6">
+                <label for="p-dateSoumission">Date de soumission : </label>
+                <input type="text" class="form-control" placeholder="dd/MM/yyyy"  id="p-dateSoumission"
+                 name="dateSoumission" [(ngModel)]="studio.dateSoumission"/> 
+            </div>
+            <div class="form-group col-md-6">
+                <label for="p-dateDisposition">Date de disposition : </label>
+                <input type="text" class="form-control" placeholder="dd/MM/yyyy" id="p-dateDisposition"
+                    name="dateDisposition" [(ngModel)]="studio.dateDisposition" />
+            </div><!-- end div input dateDisposition -->
+
+            <div class="form-group col-md-6">
+                <label for="p-revenu">Revenu : </label>
+                <input type="text" class="form-control" placeholder="Revenu" id="p-revenu" name="revenu"
+                    [(ngModel)]="studio.revenu" />
+            </div><!-- end div input revenu -->
+
+            <div class="form-group col-md-6">
+                <label for="p-nbPieces">Nombre de Pieces : </label>
+                <input type="text" class="form-control" placeholder="Superficie" id="p-nbPieces" name="nbPieces"
+                    [(ngModel)]="studio.nbPieces" />
+            </div><!-- end div input nbPieces -->
+
+            <div class="form-group col-md-6">
+                <label for="p-superficie">Superficie : </label>
+                <input type="text" class="form-control" placeholder="Superficie" id="p-superficie" name="superficie"
+                    [(ngModel)]="studio.superficie" />
+            </div><!-- end div input superficie -->
+
+
+            <div class="form-group col-md-6">
+                <label for="p-adresseBien">Adresse : </label>
+                <input type="text" class="form-control" placeholder="ID de l'adresse" id="p-adresseBien"
+                    name="adresseBien" [(ngModel)]="studio.adresseBien.idAdresse" />
+            </div><!-- end div input standard -->
+
+
+            <div>
+                <button class="btn btn-success" type="submit">Sauvegarder</button>
+            </div><!-- end div footer -->
+
+        </form>
+
+    </div>
+
+</div>
+

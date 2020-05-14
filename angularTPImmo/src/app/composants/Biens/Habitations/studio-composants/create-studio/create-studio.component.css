@@ -1,0 +1,42 @@
+.container{
+
+    /*  background-color: lightgreen; */
+     border: goldenrod solid 1px;
+     border-radius: 12px;
+     padding:10px;
+     background-color: white;
+ 
+ }
+ 
+ .carroussel{
+     /* background-color: lightcoral;
+     border: red solid 1px; */
+ 
+ }
+ 
+ .infos{
+    /*  background-color: lightblue;
+     border: blue solid 1px; */
+     background-color: white;
+ }
+ 
+ .form-group{
+     display:inline-flexbox;
+     background-color: white;
+ }
+ 
+ 
+ button{
+     width: 100%;
+     border: solid 1px goldenrod;
+     color: goldenrod;
+     background-color: white;
+ }
+ 
+ 
+ button:hover{
+     width: 100%;
+     border: solid 1px goldenrod;
+     color: black;
+     background-color: goldenrod;
+ }
