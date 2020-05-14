@@ -39,6 +39,8 @@ import { ListeContratLocationComponent } from 'src/app/composants/Contrats/contr
 import { CreateContratLocationComponent } from 'src/app/composants/Contrats/contratLocation-composants/create-contrat-location/create-contrat-location.component'
 import { ListeContratVenteComponent } from 'src/app/composants/Contrats/contratVente-composants/liste-contrat-vente/liste-contrat-vente.component'
 import { CreateContratVenteComponent } from 'src/app/composants/Contrats/contratVente-composants/create-contrat-vente/create-contrat-vente.component'
+import { ListeAdressePersonneComponent } from './composants/Adresses/adressePersonne-composants/liste-adresse-personne/liste-adresse-personne.component';
+import { CreateAdressePersonneComponent } from './composants/Adresses/adressePersonne-composants/create-adresse-personne/create-adresse-personne.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"accueil", pathMatch:'full'}, // route par défaut - redirection
@@ -76,7 +78,9 @@ const routes: Routes = [
   /* autres routes */
 
   {path:"adresseBienList", component: ListeAdresseBienComponent },
-  {path:"adresseBien/:id", component: CreateAdresseBienComponent },  
+  {path:"adresseBien/:id", component: CreateAdresseBienComponent },
+  {path:"adressePersonneList", component: ListeAdressePersonneComponent },
+  {path:"adressePersonne/:id", component: CreateAdressePersonneComponent},  
   {path:"visiteList", component: ListeVisitesComponent },
   {path:"visite/:id", component: CreateVisiteComponent },
   {path:"contratLocationList", component: ListeContratLocationComponent },

@@ -1,1 +1,90 @@
-<p>liste-adresse-personne works!</p>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<div class="container" style="text-align: center; width: 1170px;">
+<div class="panel panel-primary" *ngFor="let a of adressePersonnes" >
+
+    <!-- ============================================== -->
+    <!-- =============== Body du panneau ============== -->
+    <!-- ============================================== -->
+    
+    <div class="panel-body">
+        <div>
+            <div class="row vertical-align">
+
+
+                <table id="TableAPersonne">
+                    <tr style="font-weight: bold;">
+                       
+                        <!-- _______ ID ______ -->
+                        <td>ID</td>
+
+                        <!-- _______ Rue ______ -->
+                        <td>Adresse</td>
+
+                        <!-- _______ Code Postal ______ -->
+                        <td>Code Postal</td>
+
+                        <!-- _______ Ville ______ -->
+                        <td>Ville</td>
+
+                        <!-- _______ Bien ______ -->
+                        <td *ngIf="previewInfos">Personne</td>
+                        
+                    </tr>
+
+                    <tr>
+                        <!-- _______ ID ______ -->
+                        <td>{{a.idAdresse}}</td>
+
+                        <!-- _______ Rue ______ -->
+                        <td>{{a.rue}}</td>
+
+                        <!-- _______ Code Postal ______ -->
+                        <td>{{a.codePostal}}</td>
+
+                        <!-- _______ Ville ______ -->
+                        <td>{{a.ville}}</td>
+
+                        <!-- _______ Bien ______ -->
+                        <td *ngIf="previewInfos">{{a.personne}}</td>
+                        
+                    </tr>
+                </table>
+ 
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- ============== footer du panneau ============= -->
+    <!-- ============================================== -->
+    <div class="panel-footer">
+
+        <!-- bouton pour éditer -->
+        <button class="btn btn-editer" (click)="editAdressePersonne(a.idAdresse)">
+            Modifier
+        </button> &nbsp;
+
+        <!-- bouton pour infos -->
+        <button class="btn btn-infos" (click)="toggleInfosPreview()">
+            {{ previewInfos ? "Θ d'infos" : "⊕ d'infos" }}
+        </button>
+
+        <!-- bouton pour supprimer -->
+        <button class="btn btn-supprimer" (click)="deleteAdressePersonne(a)">
+            Supprimer
+        </button>
+    </div>
+
+</div>
+
+</div><!-- fin div container -->
+
+<div class="container" style="padding-right: 2%;">
+
+<!-- bouton pour ajouter -->
+<button class="btn btn-ajouter" (click)="editAdressePersonne(0)">
+    Λلouter
+</button>
+
+</div>
