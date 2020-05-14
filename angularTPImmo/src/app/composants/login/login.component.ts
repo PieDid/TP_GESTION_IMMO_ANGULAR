@@ -9,6 +9,12 @@ import { TokenStorageService } from 'src/app/services/token-storage.service';
 })
 export class LoginComponent implements OnInit {
 
+  public showAdmin = false;
+  public showClient = false;
+  public showProp = false;
+  public showAgent = false;
+  public showLoc = false;
+
   form: any = {};
   isLoggedIn = false;
   isLoginFailed = false;
@@ -21,6 +27,11 @@ export class LoginComponent implements OnInit {
     if (this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
       this.roles = this.tokenStorage.getUser().roles;
+      this.showAdmin = this.roles.includes('ROLE_ADMIN');
+      this.showClient = this.roles.includes('ROLE_CLIENT');
+      this.showProp = this.roles.includes('ROLE_PROP');
+      this.showAgent = this.roles.includes('ROLE_AGENT');
+      this.showLoc = this.roles.includes('ROLE_LOC');
     }
   }
 
