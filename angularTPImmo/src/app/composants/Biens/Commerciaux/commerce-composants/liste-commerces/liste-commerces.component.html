@@ -1,61 +1,87 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-<div class="container"style="text-align: center;">
-    <div class="panel" *ngFor="let t of commerces">
-
-        <!-- ============================================== -->
-        <!-- ============= HEADER du panneau ============== -->
-        <!-- ============================================== -->
+<div class="container" style="text-align: center;">
 
 
-        <div class="panel-heading">
-            <span class="panel-price"> {{t.prix}} €</span>
-            <span class="panel-rating">
-                <ngb-rating [(rate)]="t.standard">
-                    <ng-template let-fill="fill" let-index="index">
-                        <span class="star" [class.filled]="fill === 100" [class.bad]="index < 2"
-                            [class.perfect]="index === 4">&#9733;</span>
-                    </ng-template>
-                </ngb-rating>
-            </span>
+    <div class="filtres">
+        <div class="filtre">
+            <label>Rating Min : </label>
+            <input type="text" [(ngModel)]="ratingMin" />
+
+            <label>Rating Max : </label>
+            <input type="text" [(ngModel)]="ratingMax" />
+        </div>
+        <div class="filtre">
+            <label>Prix Min : </label>
+            <input type="text" [(ngModel)]="prixMin" />
+
+            <label>Prix Max : </label>
+            <input type="text" [(ngModel)]="prixMax" />
+        </div>
+    </div>
+
+    <div *ngFor="let t of commerces">
+        <div *ngIf="t.standard >= ratingMin && t.standard <= ratingMax">
+            <div *ngIf="t.prix >= prixMin && t.prix <= prixMax">
+                <div class="panel">
+
+
+                    <!-- ============================================== -->
+                    <!-- ============= HEADER du panneau ============== -->
+                    <!-- ============================================== -->
+
+
+                    <div class="panel-heading">
+                        <span class="panel-price"> {{t.prix}} €</span>
+                        <span class="panel-rating">
+                            <ngb-rating [(rate)]="t.standard">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <span class="star" [class.filled]="fill === 100" [class.bad]="index < 2"
+                                        [class.perfect]="index === 4">&#9733;</span>
+                                </ng-template>
+                            </ngb-rating>
+                        </span>
 
 
 
-        </div> <!-- end div header -->
+                    </div> <!-- end div header -->
 
-        <!-- =========================================== -->
-        <!-- ============= BODY du panneau ============= -->
-        <!-- =========================================== -->
-        <div class="panel-body">
-        </div> <!-- end div body -->
+                    <!-- =========================================== -->
+                    <!-- ============= BODY du panneau ============= -->
+                    <!-- =========================================== -->
+                    <div class="panel-body">
+                    </div> <!-- end div body -->
 
-        <!-- ============================================= -->
-        <!-- ============= FOOTER du panneau ============= -->
-        <!-- ============================================= -->
-        <div class="panel-footer">
+                    <!-- ============================================= -->
+                    <!-- ============= FOOTER du panneau ============= -->
+                    <!-- ============================================= -->
+                    <div class="panel-footer">
 
-            <!-- ++++ BOUTON POUR EDITER ++++ -->
-            <button class="btn" (click)="editCommerce(t.id_bien)">
-                Consulter
-            </button>
+                        <!-- ++++ BOUTON POUR EDITER ++++ -->
+                        <button class="btn" (click)="editCommerce(t.id_bien)">
+                            Consulter
+                        </button>
 
-            <!-- ++++ BOUTON POUR SUPPRIMER ++++ -->
-            <button class="btn" (click)="deleteCommerce(t)">
-                Supprimer
-            </button>
+                        <!-- ++++ BOUTON POUR SUPPRIMER ++++ -->
+                        <button class="btn" (click)="deleteCommerce(t)">
+                            Supprimer
+                        </button>
 
-        </div> <!-- end div footer -->
+                    </div> <!-- end div footer -->
 
-        
 
-    </div> <!-- end div panel -->
 
-    <button class="btn "  (click)="editCommerce(0)">
+                </div> <!-- end div panel -->
+            </div>
+        </div>
+    </div>
+    
+    <button class="btn " (click)="editCommerce(0)">
         Ajouter un commerce
     </button>
-   
-   
-    
+
+
+
 
 </div>
 

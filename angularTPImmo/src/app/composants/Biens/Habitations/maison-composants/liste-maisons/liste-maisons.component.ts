@@ -21,6 +21,13 @@ export class ListeMaisonsComponent implements OnInit {
     this._maisons = value;
   }
 
+  ratingMin = 1;
+  ratingMax = 5;
+  
+  prixMin = 0;
+  prixMax = 1E100;
+
+  
   constructor(private maisonService : MaisonService, config: NgbRatingConfig, private router : Router) {
     /* pour le nb max d'étoile et lecture seule ou non */
     config.max = 5;

@@ -14,6 +14,13 @@ export class ListeBureauxComponent implements OnInit {
 
   private _bureaux = [];
 
+  ratingMin = 1;
+  ratingMax = 5;
+  
+  prixMin = 0;
+  prixMax = 1E100;
+
+  
   public get bureaux() {
     return this._bureaux;
   }

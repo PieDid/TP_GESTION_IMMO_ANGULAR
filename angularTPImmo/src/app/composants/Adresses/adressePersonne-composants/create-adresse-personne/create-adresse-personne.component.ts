@@ -1,18 +1,18 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
-import { IAdressePersonne } from 'src/app/modele/IAdressePersonne';
-import { AdressePersonneService } from 'src/app/services/adresse-personne.service';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import {IAdressePersonne} from '../../../../modele/IAdressePersonne'
+import {AdressePersonneService} from '../../../../services/adresse-personne.service'
 
 @Component({
   selector: 'app-create-adresse-personne',
   templateUrl: './create-adresse-personne.component.html',
   styleUrls: ['./create-adresse-personne.component.css']
 })
+
 export class CreateAdressePersonneComponent implements OnInit {
 
-  adressePersonne : IAdressePersonne = {
+  adressePersonne : IAdressePersonne = {               
 
     idAdresse : null,
     rue : null,

@@ -1,88 +1,92 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-<div class="container"style="text-align: center;">
-    <div class="panel" *ngFor="let t of terrains">
+<div class="container" style="text-align: center;">
 
-        <!-- ============================================== -->
-        <!-- ============= HEADER du panneau ============== -->
-        <!-- ============================================== -->
+    <div class="filtres">
+        <div class="filtre">
+            <label>Rating Min : </label>
+            <input type="text" [(ngModel)]="ratingMin" />
 
+            <label>Rating Max : </label>
+            <input type="text" [(ngModel)]="ratingMax" />
+        </div>
+        <div class="filtre">
+            <label>Prix Min : </label>
+            <input type="text" [(ngModel)]="prixMin" />
 
-        <div class="panel-heading">
-            <span class="panel-price"> {{t.prix}} €</span>
-            <span class="panel-rating">
-                <ngb-rating [(rate)]="t.standard">
-                    <ng-template let-fill="fill" let-index="index">
-                        <span class="star" [class.filled]="fill === 100" [class.bad]="index < 2"
-                            [class.perfect]="index === 4">&#9733;</span>
-                    </ng-template>
-                </ngb-rating>
-            </span>
-
-
-
-        </div> <!-- end div header -->
-
-        <!-- =========================================== -->
-        <!-- ============= BODY du panneau ============= -->
-        <!-- =========================================== -->
-        <div class="panel-body">
-        </div> <!-- end div body -->
-
-        <!-- ============================================= -->
-        <!-- ============= FOOTER du panneau ============= -->
-        <!-- ============================================= -->
-        <div class="panel-footer">
-
-            <!-- ++++ BOUTON POUR EDITER ++++ -->
-            <button class="btn" (click)="editTerrain(t.id_bien)">
-                Consulter
-            </button>
-
-            <!-- ++++ BOUTON POUR SUPPRIMER ++++ -->
-            <button class="btn" (click)="deleteTerrain(t)">
-                Supprimer
-            </button>
-
-        </div> <!-- end div footer -->
-
-        
-
-    </div> <!-- end div panel -->
-
-    <button class="btn "  (click)="editTerrain(0)">
-        Ajouter un terrain
-    </button>
-   
-   
-    
-
-</div>
-
-
-
-<!-- <div>
-
-    <h1>Liste Des terrains</h1>
-
-    <br />
-    <hr>
-    <br />
-
-    <div>
-        <ul *ngFor="let t of terrains">
-            <div class="divterrain container-md col-md-4">
-                <div class="photos">
-                    <div class="info">
-                        {{t.dateDisposition}}
-                        {{t.dateSoumission}}
-                        <span class="prix">{{t.prix}} €</span>
-
-                    </div>
-                </div>
-            </div>
-
-        </ul>
+            <label>Prix Max : </label>
+            <input type="text" [(ngModel)]="prixMax" />
+        </div>
     </div>
 
-</div> -->
+    <div *ngFor="let t of terrains">
+        <div *ngIf="t.standard >= ratingMin && t.standard <= ratingMax">
+            <div *ngIf="t.prix >= prixMin && t.prix <= prixMax">
+                <div class="panel">
+
+                    <!-- filtre sur le rating -->
+
+                    <!-- filtre sur le prix-->
+                    <div>
+
+
+
+                        <!-- ============================================== -->
+                        <!-- ============= HEADER du panneau ============== -->
+                        <!-- ============================================== -->
+
+
+                        <div class="panel-heading">
+                            <span class="panel-price"> {{t.prix}} €</span>
+                            <span class="panel-rating">
+                                <ngb-rating [(rate)]="t.standard">
+                                    <ng-template let-fill="fill" let-index="index">
+                                        <span class="star" [class.filled]="fill === 100" [class.bad]="index < 2"
+                                            [class.perfect]="index === 4">&#9733;</span>
+                                    </ng-template>
+                                </ngb-rating>
+                            </span>
+
+
+
+                        </div> <!-- end div header -->
+
+                        <!-- =========================================== -->
+                        <!-- ============= BODY du panneau ============= -->
+                        <!-- =========================================== -->
+                        <div class="panel-body">
+                        </div> <!-- end div body -->
+
+                        <!-- ============================================= -->
+                        <!-- ============= FOOTER du panneau ============= -->
+                        <!-- ============================================= -->
+                        <div class="panel-footer">
+
+                            <!-- ++++ BOUTON POUR EDITER ++++ -->
+                            <button class="btn" (click)="editTerrain(t.id_bien)">
+                                Consulter
+                            </button>
+
+                            <!-- ++++ BOUTON POUR SUPPRIMER ++++ -->
+                            <button class="btn" (click)="deleteTerrain(t)">
+                                Supprimer
+                            </button>
+
+                        </div> <!-- end div footer -->
+
+
+
+                    </div><!-- end div panel -->
+                </div> <!-- end div if -->
+            </div><!-- end div for -->
+        </div>
+
+    </div>
+
+    <button class="btn " (click)="editTerrain(0)">
+        Ajouter un terrain
+    </button>
+
+
+
+</div>

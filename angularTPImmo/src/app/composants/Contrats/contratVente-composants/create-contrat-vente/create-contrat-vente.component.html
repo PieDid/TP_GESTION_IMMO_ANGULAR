@@ -1,1 +1,75 @@
-<p>create-contrat-vente works!</p>
+<!-- formulaire d'ajout d'un client -->
+
+<!--
+    > à la soumission du formulaire on va exécuter la méthode saveOrUpdateClient() du composant
+-->
+<div class="container">
+    <form #clientForm="ngForm" (ngSubmit)="saveOrUpdateContratVente()">
+        <!-- panneau - panel -->
+        <div class="panel panel-primary">
+    
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <!-- ++++++++++ head du panel +++++++++++ -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <div class="panel-heading">
+                <h3 class="panel-title">Ajout d'un nouveau contrat de vente</h3>
+            </div>
+    
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <!-- ++++++++++ body du panel +++++++++++ -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <div class="panel-body">
+
+                <!-- ____ Date ____ -->
+                <div class="form-group">
+                    <label for="p-nom">Date du contrat : </label>
+                    <input type="text" class="form-control" placeholder="dd/MM/yyyy" id="p-date" name="date" [(ngModel)]="contratVente.date">
+                </div>
+    
+                <!-- ____ Bien ____ -->
+                <div class="form-group">
+                    <label for="bien">Bien : </label>
+                    <input  class="form-control" placeholder="Bien" id="bien" name="bien" [(ngModel)]="contratVente.bien" >
+                </div>
+
+                 <!-- ____ Agent ____ -->
+                 <div class="form-group">
+                    <label for="agent">Agent : </label>
+                    <input  class="form-control" placeholder="Agent" id="agent" name="agent" [(ngModel)]="contratVente.agent" >
+                </div>
+                 <!-- ____ Proprietaire ____ -->
+                 <div class="form-group">
+                    <label for="proprietaire">Proprietaire : </label>
+                    <input  class="form-control" placeholder="Proprietaire" id="proprietaire" name="proprietaire" [(ngModel)]="contratVente.proprietaire" >
+                </div>
+                 <!-- ____ Client ____ -->
+                 <div class="form-group">
+                    <label for="client">Client : </label>
+                    <input  class="form-control" placeholder="Client" id="client" name="client" [(ngModel)]="contratVente.client" >
+                </div>    
+    
+                <!-- ____ Prix ____ -->
+                <div class="form-group">
+                    <label for="p-prix">Prix (€) : </label>
+                    <input  class="form-control" placeholder="saisir le prix (€)" id="p-prix" name="prix" [(ngModel)]="contratVente.prix">
+                </div>
+    
+                <!-- ____ Etat ____ -->
+                <div class="form-group">
+                    <label for="p-etat">Etat : </label>
+                    <input type="text" class="form-control" placeholder="saisir l'état du lieu " id="p-etat" name="etat" [(ngModel)]="contratVente.etat">
+                </div>
+
+            </div>
+    
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <!-- ++++++++++ footer du panel +++++++++++ -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <div class="panel-footer">
+                <button class="btn btn-save btn-save">Enregistrer</button>
+            </div>
+    
+        </div>
+    </form>
+    
+    </div>

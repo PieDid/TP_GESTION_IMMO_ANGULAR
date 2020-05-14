@@ -14,6 +14,13 @@ export class ListeCommercesComponent implements OnInit {
 
   private _commerces = [];
 
+  ratingMin = 1;
+  ratingMax = 5;
+  
+  prixMin = 0;
+  prixMax = 1E100;
+
+  
   public get commerces() {
     return this._commerces;
   }

@@ -14,6 +14,13 @@ export class ListeEntrepotsComponent implements OnInit {
 
   private _entrepots = [];
 
+  ratingMin = 1;
+  ratingMax = 5;
+  
+  prixMin = 0;
+  prixMax = 1E100;
+
+  
   public get entrepots() {
     return this._entrepots;
   }

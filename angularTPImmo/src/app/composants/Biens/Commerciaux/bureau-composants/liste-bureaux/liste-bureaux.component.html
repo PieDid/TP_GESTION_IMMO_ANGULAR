@@ -1,52 +1,76 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <div class="container" style="text-align: center">
-<div class="panel panel-primary" *ngFor="let b of bureaux">
 
-    <!-- ============================================== -->
-    <!-- ============= HEADER du panneau ============== -->
-    <!-- ============================================== -->
+    <div class="filtres">
+        <div class="filtre">
+            <label>Rating Min : </label>
+            <input type="text" [(ngModel)]="ratingMin" />
+
+            <label>Rating Max : </label>
+            <input type="text" [(ngModel)]="ratingMax" />
+        </div>
+        <div class="filtre">
+            <label>Prix Min : </label>
+            <input type="text" [(ngModel)]="prixMin" />
+
+            <label>Prix Max : </label>
+            <input type="text" [(ngModel)]="prixMax" />
+        </div>
+    </div>
+
+    <div *ngFor="let b of bureaux">
+        <div *ngIf="b.standard >= ratingMin && b.standard <= ratingMax">
+            <div *ngIf="b.prix >= prixMin && b.prix <= prixMax">
+                <div class="panel panel-primary">
+
+                    <!-- ============================================== -->
+                    <!-- ============= HEADER du panneau ============== -->
+                    <!-- ============================================== -->
 
 
-    <div class="panel-heading">
-        <span class="panel-price"> {{b.prix}} €</span>
-        <span class="panel-rating">
-            <ngb-rating [(rate)]="b.standard">
-                <ng-template let-fill="fill" let-index="index">
-                    <span class="star" [class.filled]="fill === 100" [class.bad]="index < 2"
-                        [class.perfect]="index === 4">&#9733;</span>
-                </ng-template>
-            </ngb-rating>
-        </span>
-    </div> <!-- end div header -->
+                    <div class="panel-heading">
+                        <span class="panel-price"> {{b.prix}} €</span>
+                        <span class="panel-rating">
+                            <ngb-rating [(rate)]="b.standard">
+                                <ng-template let-fill="fill" let-index="index">
+                                    <span class="star" [class.filled]="fill === 100" [class.bad]="index < 2"
+                                        [class.perfect]="index === 4">&#9733;</span>
+                                </ng-template>
+                            </ngb-rating>
+                        </span>
+                    </div> <!-- end div header -->
 
 
-        <!-- =========================================== -->
-        <!-- ============= BODY du panneau ============= -->
-        <!-- =========================================== -->
-        <div class="panel-body">
-        </div> <!-- end div body -->
+                    <!-- =========================================== -->
+                    <!-- ============= BODY du panneau ============= -->
+                    <!-- =========================================== -->
+                    <div class="panel-body">
+                    </div> <!-- end div body -->
 
-        <!-- ============================================= -->
-        <!-- ============= FOOTER du panneau ============= -->
-        <!-- ============================================= -->
-        <div class="panel-footer">
+                    <!-- ============================================= -->
+                    <!-- ============= FOOTER du panneau ============= -->
+                    <!-- ============================================= -->
+                    <div class="panel-footer">
 
-            <!-- ++++ BOUTON POUR EDITER ++++ -->
-            <button class="btn" (click)="editBureau(b.id_bien)">
-                Consulter
-            </button>
+                        <!-- ++++ BOUTON POUR EDITER ++++ -->
+                        <button class="btn" (click)="editBureau(b.id_bien)">
+                            Consulter
+                        </button>
 
-            <!-- ++++ BOUTON POUR SUPPRIMER ++++ -->
-            <button class="btn" (click)="deleteBureau(b)">
-                Supprimer
-            </button>
+                        <!-- ++++ BOUTON POUR SUPPRIMER ++++ -->
+                        <button class="btn" (click)="deleteBureau(b)">
+                            Supprimer
+                        </button>
 
-        </div> <!-- end div footer -->
+                    </div> <!-- end div footer -->
 
-        
 
-    </div> <!-- end div panel -->
 
-    <button class="btn "  (click)="editBureau(0)">
+                </div> <!-- end div panel -->
+            </div>
+        </div>
+    </div>
+
+    <button class="btn " (click)="editBureau(0)">
         Ajouter un Bureau
     </button>
