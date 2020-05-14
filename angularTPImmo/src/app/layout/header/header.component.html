@@ -10,7 +10,7 @@
         </a>
         
         <div class="navbar-nav">
-            <a class="nav-link" routerLink="/achat" routerLinkActive="active">Achat</a>
+            <a class="nav-link" routerLink="/achat" routerLinkActive="active"  >Achat</a>
             <a class="nav-link" [routerLink]="['location']"
             [routerLinkActive]="['active','decoration']">Location</a>
             <li ngbDropdown class="">
@@ -29,8 +29,11 @@
         </div>
 
         <!-- bouton 'Se connecter' -->
-        <div>
-            <button class="btn">Se connecter</button>
+        <div *ngIf="!isLoggedIn">
+            <button class="btn" routerLink="login" href="/login">Se connecter</button>
+        </div>
+        <div *ngIf="isLoggedIn">
+            <button class="btn" (click)="logout()">déconnexion</button>
         </div>
        
     </nav>

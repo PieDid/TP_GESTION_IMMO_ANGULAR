@@ -36,6 +36,15 @@ import { ListeProprietairesComponent } from './composants/Personnes/proprietaire
 import { CreateProprietaireComponent } from './composants/Personnes/proprietaire-composants/create-proprietaire/create-proprietaire.component';
 import { ListeAdministrateursComponent } from './composants/Personnes/administrateur-composants/liste-administrateurs/liste-administrateurs.component';
 import { CreateAdministrateurComponent } from './composants/Personnes/administrateur-composants/create-administrateur/create-administrateur.component';
+import { LoginComponent } from './composants/login/login.component';
+import { RegisterComponent } from './composants/register/register.component';
+import { HomeComponent } from './composants/home/home.component';
+import { ProfileComponent } from './composants/profile/profile.component';
+import { BoardAdminComponent } from './composants/board-admin/board-admin.component';
+import { BoardAgentComponent } from './composants/board-agent/board-agent.component';
+import { BoardLocComponent } from './composants/board-loc/board-loc.component';
+import { BoardPropComponent } from './composants/board-prop/board-prop.component';
+import { BoardClientComponent } from './composants/board-client/board-client.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +76,16 @@ import { CreateAdministrateurComponent } from './composants/Personnes/administra
     ListeProprietairesComponent,
     CreateProprietaireComponent,
     ListeAdministrateursComponent,
-    CreateAdministrateurComponent
+    CreateAdministrateurComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent,
+    ProfileComponent,
+    BoardAdminComponent,
+    BoardAgentComponent,
+    BoardLocComponent,
+    BoardPropComponent,
+    BoardClientComponent
   ],
   imports: [
     HttpClientModule,

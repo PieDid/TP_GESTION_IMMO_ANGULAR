@@ -14,6 +14,11 @@ import { ListeProprietairesComponent } from './composants/Personnes/proprietaire
 import { CreateProprietaireComponent } from './composants/Personnes/proprietaire-composants/create-proprietaire/create-proprietaire.component';
 import { ListeAdministrateursComponent } from './composants/Personnes/administrateur-composants/liste-administrateurs/liste-administrateurs.component';
 import { CreateAdministrateurComponent } from './composants/Personnes/administrateur-composants/create-administrateur/create-administrateur.component';
+import { HomeComponent } from './composants/home/home.component';
+import { LoginComponent } from './composants/login/login.component';
+import { RegisterComponent } from './composants/register/register.component';
+import { ProfileComponent } from './composants/profile/profile.component';
+import { BoardAdminComponent } from './composants/board-admin/board-admin.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"accueil", pathMatch:'full'}, // route par défaut - redirection
@@ -32,7 +37,15 @@ const routes: Routes = [
   {path:"administrateurList", component: ListeAdministrateursComponent},
   {path:"administrateurEdit/:id", component: CreateAdministrateurComponent},
   {path:"terrainList", component: ListeTerrainsComponent },
-  {path:"terrain/:id", component: TerrainComponent }
+  {path:"terrain/:id", component: TerrainComponent },
+
+  /* routes sercurité */
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'user', component: BoardAdminComponent },
+  
 /* ,
   {path:"**", component: AccueilComponent} */
 

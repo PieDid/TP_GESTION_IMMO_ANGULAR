@@ -7,16 +7,39 @@ import { tap, filter, map } from 'rxjs/operators';
 import { IPersonne } from '../modele/IPersonne';
 import { Router } from '@angular/router';
 
+export class Personne{
+  constructor(
+    public identifiant:number,
+    public nom:string,
+    public motDePasse:string,
+    public statut:string,
+    public photo:string
+  ) {}
+}
+
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class PersonneService {
+
+  private _refreshNeeded = new Subject<void>();
+  public get refreshNeeded() {
+    return this._refreshNeeded;
+  }
 
   private WS_REST_BASE_URL = "http://localhost:8080/tp_gestion_immobiliere/personne-rest/personne";
 
-  refreshNeeded = new Subject();
+
+  //refreshNeeded = new Subject();
 
   constructor(private httpClient: HttpClient, private router: Router) { }
+
+  getPersonne()
+  {
+    return this.httpClient.get<Personne[]>(`${this.WS_REST_BASE_URL}List`);
+  }
 
   getAllPersonne(): Observable<IPersonne[]> {
     return this.httpClient.get<IPersonne[]>(`${this.WS_REST_BASE_URL}List`);

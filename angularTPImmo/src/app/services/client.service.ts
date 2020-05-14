@@ -18,7 +18,7 @@ import { Router } from '@angular/router';
 export class ClientService {
 
    //prop : URL de base du ws REST :
-   private WS_REST_BASE_URL = "http://localhost:8080/tp_gestion_immobiliere/client-rest/client";
+   private WS_REST_BASE_URL = "http://localhost:8080/TP_Spring_GestionImmobiliere/client-rest/client";
 
 
    //prop : objet de type de l'observable Subject pour rafraichir la page
