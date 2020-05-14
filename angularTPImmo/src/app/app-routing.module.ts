@@ -27,6 +27,10 @@ import { ProfileComponent } from './composants/profile/profile.component';
 import { BoardAdminComponent } from './composants/board-admin/board-admin.component';
 import { ListeBureauxComponent } from './composants/Biens/Commerciaux/bureau-composants/liste-bureaux/liste-bureaux.component';
 import { CreateBureauComponent } from './composants/Biens/Commerciaux/bureau-composants/create-bureau/create-bureau.component';
+import { ListeCommercesComponent } from './composants/Biens/Commerciaux/commerce-composants/liste-commerces/liste-commerces.component';
+import { CreateCommerceComponent } from './composants/Biens/Commerciaux/commerce-composants/create-commerce/create-commerce.component';
+import { ListeEntrepotsComponent } from './composants/Biens/Commerciaux/entrepot-composants/liste-entrepots/liste-entrepots.component';
+import { CreateEntrepotComponent } from './composants/Biens/Commerciaux/entrepot-composants/create-entrepot/create-entrepot.component';
 
 
 
@@ -58,6 +62,10 @@ const routes: Routes = [
   {path:"studio/:id", component: CreateStudioComponent },
   {path:"bureauList", component: ListeBureauxComponent },
   {path:"bureau/:id", component: CreateBureauComponent },
+  {path:"commerceList", component: ListeCommercesComponent },
+  {path:"commerce/:id", component: CreateCommerceComponent },
+  {path:"entrepotList", component: ListeEntrepotsComponent },
+  {path:"entrepot/:id", component: CreateEntrepotComponent },
 
   /* routes securité */
   { path: 'home', component: HomeComponent },

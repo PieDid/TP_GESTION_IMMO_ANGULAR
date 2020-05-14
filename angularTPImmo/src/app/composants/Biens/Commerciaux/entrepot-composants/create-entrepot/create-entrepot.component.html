@@ -1,0 +1,92 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<div class="container">
+
+    <div class="carroussel">
+
+        <ngb-carousel class="carroussel">
+
+            <!-- maisons  -->
+            <ng-template ngbSlide *ngFor="let p of entrepot.listePhoto">
+                <!-- image -->
+                <div class="picsum-img-wrapper">
+                    <img [src]="p" alt="photos">
+                </div>
+            </ng-template>
+
+        </ngb-carousel>
+
+    </div>
+
+    <div class="infos">
+
+        <form #entrepotForm="ngForm" (ngSubmit)="saveOrUpdateEntrepot()">
+
+            <div class="form-group col-md-6">
+                <label for="p-id">ID du entrepot : </label>
+                <input type="text" class="form-control" placeholder="Identifiant" id="p-id" name="id_bien"
+                    [(ngModel)]="entrepot.id_bien" />
+            </div><!-- end div input id -->
+
+            <div class="form-group col-md-6">
+                <label for="p-statut">Statut du entrepot (true si libre, false si occupé): </label>
+                <input type="text" class="form-control" placeholder="Statut du bien" id="p-statut" name="statut"
+                    [(ngModel)]="entrepot.statut" />
+            </div><!-- end div input statut -->
+
+            <div class="form-group col-md-6">
+                <label for="p-offre">Offre : </label>
+                <input type="text" class="form-control" placeholder="Offre proposée (€)" id="p-offre" name="offre"
+                    [(ngModel)]="entrepot.offre" />
+            </div><!-- end div input offre -->
+
+            <div class="form-group col-md-6">
+                <label for="p-prix">Prix : </label>
+                <input type="text" class="form-control" placeholder="Prix du entrepot (€)" id="p-prix" name="prix"
+                    [(ngModel)]="entrepot.prix" />
+            </div><!-- end div input prix -->
+
+            <div class="form-group col-md-6">
+                <label for="p-standard">Standard : </label>
+                <input type="text" class="form-control" placeholder="Standard (1-5)"  id="p-standard"
+                 name="standard" [(ngModel)]="entrepot.standard" pattern="[1-5]{1}"/>
+            </div><!-- end div input standard -->
+
+            <div class="form-group col-md-6">
+                <label for="p-dateSoumission">Date de soumission : </label>
+                <input type="text" class="form-control" placeholder="dd/MM/yyyy"  id="p-dateSoumission"
+                 name="dateSoumission" [(ngModel)]="entrepot.dateSoumission"/> 
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="p-dateDisposition">Date de disposition : </label>
+                <input type="text" class="form-control" placeholder="dd/MM/yyyy" id="p-dateDisposition"
+                    name="dateDisposition" [(ngModel)]="entrepot.dateDisposition" />
+            </div><!-- end div input dateDisposition -->
+
+            <div class="form-group col-md-6">
+                <label for="p-revenu">Revenu : </label>
+                <input type="text" class="form-control" placeholder="Revenu" id="p-revenu" name="revenu"
+                    [(ngModel)]="entrepot.revenu" />
+            </div><!-- end div input revenu -->
+
+            <div class="form-group col-md-6">
+                <label for="p-superficie">Superficie : </label>
+                <input type="text" class="form-control" placeholder="Superficie" id="p-superficie" name="superficie"
+                    [(ngModel)]="entrepot.superficie" />
+            </div><!-- end div input superficie -->
+
+            <div class="form-group col-md-6">
+                <label for="p-adresseBien">Adresse : </label>
+                <input type="text" class="form-control" placeholder="ID de l'adresse" id="p-adresseBien"
+                    name="adresseBien" [(ngModel)]="entrepot.adresseBien.idAdresse" />
+            </div><!-- end div input standard -->
+
+            <div>
+                <button class="btn btn-success">Sauvegarder</button>
+            </div><!-- end div footer -->
+
+        </form>
+
+    </div>
+
+</div>

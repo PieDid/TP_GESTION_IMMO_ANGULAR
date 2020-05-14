@@ -47,6 +47,8 @@ import { BoardLocComponent } from './composants/board-loc/board-loc.component';
 import { BoardPropComponent } from './composants/board-prop/board-prop.component';
 import { BoardClientComponent } from './composants/board-client/board-client.component';
 import { CreateBureauComponent } from './composants/Biens/Commerciaux/bureau-composants/create-bureau/create-bureau.component';
+import { CreateCommerceComponent } from './composants/Biens/Commerciaux/commerce-composants/create-commerce/create-commerce.component';
+import { CreateEntrepotComponent } from './composants/Biens/Commerciaux/entrepot-composants/create-entrepot/create-entrepot.component';
 
 
 @NgModule({
@@ -92,7 +94,9 @@ import { CreateBureauComponent } from './composants/Biens/Commerciaux/bureau-com
     BoardLocComponent,
     BoardPropComponent,
     BoardClientComponent,
-    CreateBureauComponent
+    CreateBureauComponent,
+    CreateCommerceComponent,
+    CreateEntrepotComponent
   ],
   imports: [
     HttpClientModule,
