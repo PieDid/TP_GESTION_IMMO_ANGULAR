@@ -6,6 +6,7 @@ import {FormControl, Validators} from '@angular/forms';
 import {MatButton, MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon'; */
 import { IAdministrateur } from '../../../../modele/IAdministrateur';
+import { AdressePersonneService } from '../../../../services/adresse-personne.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AdministrateurService } from '../../../../services/administrateur.service';
 
@@ -17,13 +18,17 @@ import { AdministrateurService } from '../../../../services/administrateur.servi
 export class CreateAdministrateurComponent implements OnInit {
 
 
-  administrateur : IAdministrateur = {identifiant:null, nom:null, email:null, motDePasse:null, statut:null, adressePersonne:null,  photo:null};
+  administrateur : IAdministrateur = {identifiant:null, nom:null, email:null, motDePasse:null, statut:null, adresseP:null,  photo:null};
+
+  /* bricolage d'André */
+  adresse: any;
 
   //prop : pour la gestion de l'aperçu de l'image
   previewPhoto : boolean = false;
 
   constructor(private router : Router, 
               private administrateurService : AdministrateurService, 
+              private adressePersonneService : AdressePersonneService,
               private activatedRoute : ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -54,6 +59,11 @@ export class CreateAdministrateurComponent implements OnInit {
     //--> test du administrateur à ajouter ou à modifier
     if(this.administrateur.identifiant == null){
       //--------- nouveau administrateur -----------//
+      console.log("1-ID de l'adresse : "+ this.adresse);
+      this.adressePersonneService.findAdressePersonneById(this.adresse).subscribe(
+        (adresse) => { this.administrateur.adresseP = adresse; console.log("1-ID de l'adressePersonne : "+ this.administrateur.adresseP.rue);}
+      );
+
       //-> appel du service AdministrateurService pour l'ajout de l'administrateur
       this.administrateurService.ajouterAdministrateur(this.administrateur).subscribe(
         (data) => { console.log(data); }
@@ -84,7 +94,7 @@ export class CreateAdministrateurComponent implements OnInit {
   findAdministrateurById(idAdministrateur : number){
     if(idAdministrateur == 0){
       //--------- ajout ----------//
-      this.administrateur = {identifiant:null, nom:null, email:null, motDePasse:null, statut:null, adressePersonne:null,  photo:null};
+      this.administrateur = {identifiant:null, nom:null, email:null, motDePasse:null, statut:null, adresseP:null,  photo:null};
 
     }else{
       //-------- modif ---------//

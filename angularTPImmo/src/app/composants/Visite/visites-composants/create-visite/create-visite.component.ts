@@ -62,7 +62,7 @@ export class CreateVisiteComponent implements OnInit {
         bien : null,
         agent : null,
         client : null,
-        proprietaire : null
+        proprietaire:null
       };
 
     }else{

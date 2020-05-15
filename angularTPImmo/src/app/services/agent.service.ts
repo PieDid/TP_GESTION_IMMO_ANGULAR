@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class AgentService {
 
-  private WS_REST_BASE_URL = "http://localhost:8080/TP_Spring_GestionImmobiliere/agent-rest/agent";
+  private WS_REST_BASE_URL = "http://localhost:8080/tp_gestion_immobiliere/agent-rest/agent";
 
   refreshNeeded = new Subject();
 

@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 //import des opérateurs de rxjs
 import { tap, filter, map } from 'rxjs/operators';
+/* import { Client } from '../modele/Client'; */
 import { IClient } from '../modele/IClient';
 import { Router } from '@angular/router';
 
@@ -18,7 +19,7 @@ import { Router } from '@angular/router';
 export class ClientService {
 
    //prop : URL de base du ws REST :
-   private WS_REST_BASE_URL = "http://localhost:8080/TP_Spring_GestionImmobiliere/client-rest/client";
+   private WS_REST_BASE_URL = "http://localhost:8080/tp_gestion_immobiliere/client-rest/client";
 
 
    //prop : objet de type de l'observable Subject pour rafraichir la page

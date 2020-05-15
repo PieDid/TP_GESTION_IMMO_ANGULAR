@@ -22,7 +22,7 @@ import { VisiteService } from '../../../../services/visite.service';
 export class CreateProprietaireComponent implements OnInit {
 
 
-  proprietaire : IProprietaire = {identifiant:null, nom:null, email:null, motDePasse:null, statut:null, adressePersonne:null,  photo:null, tel_prive:null, tel_travail:null, liste_biens:null, liste_contratsVente:null, liste_contratsLocation:null, liste_visites:null};
+  proprietaire : IProprietaire = {identifiant:null, nom:null, email:null, motDePasse:null, statut:null, adresseP:null,  photo:null, tel_prive:null, tel_travail:null, liste_biens:null, liste_contratsVente:null, liste_contratsLocation:null, liste_visites:null};
   /* bricolage d'André */
   adresse: any;
 
@@ -69,10 +69,10 @@ export class CreateProprietaireComponent implements OnInit {
 
     }else{
       //--------- modification d'un proprietaire -----------//
-      /* console.log("1-ID de l'adresse : "+ this.adresse);
+      console.log("1-ID de l'adresse : "+ this.adresse);
       this.adressePersonneService.findAdressePersonneById(this.adresse).subscribe(
-        (adresse) => { this.proprietaire.adressePersonne = adresse; console.log("1-ID de l'adressePersonne : "+ this.proprietaire.adressePersonne.rue);}
-      ); */
+        (adresse) => { this.proprietaire.adresseP = adresse; console.log("1-ID de l'adressePersonne : "+ this.proprietaire.adresseP.rue);}
+      );
       
       //-> invocaion de la méthode du service modifierProprietaire() pour la maj de l'proprietaire
       this.proprietaireService.modifierProprietaire(this.proprietaire).subscribe(
@@ -97,7 +97,7 @@ export class CreateProprietaireComponent implements OnInit {
   findProprietaireById(idProprietaire : number){
     if(idProprietaire == 0){
       //--------- ajout ----------//
-      this.proprietaire = {identifiant:null, nom:null, email:null, motDePasse:null, statut:null, adressePersonne:null,  photo:null, tel_prive:null, tel_travail:null, liste_biens:null, liste_contratsVente:null, liste_contratsLocation:null, liste_visites:null};
+      this.proprietaire = {identifiant:null, nom:null, email:null, motDePasse:null, statut:null, adresseP:null,  photo:null, tel_prive:null, tel_travail:null, liste_biens:null, liste_contratsVente:null, liste_contratsLocation:null, liste_visites:null};
 
     }else{
       //-------- modif ---------//

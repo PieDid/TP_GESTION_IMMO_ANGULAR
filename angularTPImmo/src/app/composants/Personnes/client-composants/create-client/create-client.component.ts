@@ -6,6 +6,7 @@ import {FormControl, Validators} from '@angular/forms';
 import {MatButton, MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon'; */
 import { IClient } from '../../../../modele/IClient';
+/* import { Client } from '../../../../modele/Client'; */
 import { Router, ActivatedRoute } from '@angular/router';
 import { ClientService } from '../../../../services/client.service';
 import { AdressePersonneService } from '../../../../services/adresse-personne.service';
@@ -24,10 +25,11 @@ export class CreateClientComponent implements OnInit {
 
    //prop : un objet de type client vide
   //-> cet objet sera lié aux input du formulaire de create-client.component.html
-  client : IClient = {identifiant:null, nom:null, email:null, motDePasse:null, statut:null, adressePersonne:null,  photo:null, liste_visites:null, liste_contrats:null};
+  client : IClient = {identifiant:null, nom:null, email:null, motDePasse:null, statut:null, adresseP:null,  photo:null, liste_visites:null, liste_contrats:null};
+  /* client : Client = {identifiant:null, nom:null, email:null, motDePasse:null, statut:null, adresseP:null,  photo:null}; */
 
   /* bricolage d'André */
-  /* adresse:any; */
+  adresse:any;
 
   //prop : pour la gestion de l'aperçu de l'image
   previewPhoto : boolean = false;
@@ -77,10 +79,10 @@ export class CreateClientComponent implements OnInit {
 
     }else{
       //--------- modification d'un client -----------//
-      /* console.log("1-ID de l'adresse : "+ this.adresse);
+      console.log("1-ID de l'adresse : "+ this.adresse);
       this.adressePersonneService.findAdressePersonneById(this.adresse).subscribe(
-        (adresse) => { this.client.adressePersonne = adresse; console.log("1-ID de l'adressePersonne : "+ this.client.adressePersonne.rue);}
-      ); */
+        (adresse) => { this.client.adresseP = adresse; console.log("1-ID de l'adressePersonne : "+ this.client.adresseP.rue);}
+      );
 
       //-> invocaion de la méthode du service modifierClient() pour la maj du client
       this.clientService.modifierClient(this.client).subscribe(
@@ -105,7 +107,8 @@ export class CreateClientComponent implements OnInit {
   findClientById(idClient : number){
     if(idClient == 0){
       //--------- ajout ----------//
-      this.client = {identifiant:null, nom:null, email:null, motDePasse:null, statut:null, adressePersonne:null,  photo:null, liste_visites:null, liste_contrats:null};
+      this.client = {identifiant:null, nom:null, email:null, motDePasse:null, statut:null, adresseP:null,  photo:null, liste_visites:null, liste_contrats:null};
+      /* this.client = {identifiant:null, nom:null, email:null, motDePasse:null, statut:null, adresseP:null,  photo:null}; */
 
     }else{
       //-------- modif ---------//
