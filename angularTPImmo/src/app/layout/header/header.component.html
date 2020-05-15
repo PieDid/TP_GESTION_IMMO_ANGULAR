@@ -12,7 +12,7 @@
         <div class="navbar-nav">
                <!-- Personnes -->
                <li ngbDropdown class="">
-                <a href (click)="false" class="nav-link" ngbDropdownToggle>Personnes</a>
+                <a href (click)="true" class="nav-link" [routerLink]="['personneList']" ngbDropdownToggle>Personnes</a>
                 <div ngbDropdownMenu class="DropdownMenu">
                     <div >
                         <a class="nav-link" [routerLink]="['clientList']"
