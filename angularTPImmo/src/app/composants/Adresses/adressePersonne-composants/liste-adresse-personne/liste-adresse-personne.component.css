@@ -1,0 +1,42 @@
+/* CSS pour l'image */
+.imageClass{
+    width: 70px;
+    height: 80px;
+}
+
+/* css pour le détails */
+.vertical-align{
+    display: flex;
+    align-items: center;
+}
+
+
+/* css pour la table */
+#TableAPersonne { 
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+#TableAPersonne td{
+    text-align: center;
+}
+
+/* bouton infos */
+.btn-infos:hover, .btn-editer:hover, .btn-ajouter:hover, .btn-supprimer:hover{
+    color: goldenrod;
+    border-color: goldenrod;
+    border-radius: 5px;
+    border-width: 2px;
+}
+.btn-infos, .btn-editer, .btn-ajouter, .btn-supprimer{
+    color: black;
+    border-color: black;
+    border-radius: 5px;
+    border-width: 2px;
+}
+.panel{
+    border-color: goldenrod;
+}
+.btn-ajouter, .btn-supprimer{
+    float: right;
+}
