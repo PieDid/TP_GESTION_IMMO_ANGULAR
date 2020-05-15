@@ -43,6 +43,7 @@ import { ListeAdressePersonneComponent } from './composants/Adresses/adressePers
 import { CreateAdressePersonneComponent } from './composants/Adresses/adressePersonne-composants/create-adresse-personne/create-adresse-personne.component';
 import { ListePersonnesComponent } from './composants/Personnes/personne-composants/liste-personnes/liste-personnes.component';
 import { CreatePersonneComponent } from './composants/Personnes/personne-composants/create-personne/create-personne.component';
+import { NousContacterComponent } from './layout/nous-contacter/nous-contacter.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"accueil", pathMatch:'full'}, // route par défaut - redirection
@@ -50,6 +51,7 @@ const routes: Routes = [
   {path:"mentionlegales", component:MentionsLegalesComponent},  // mentions légales
   {path:"nosAgences", component:NosAgencesComponent},  // mentions légales
   {path:"donneesPersonnelles", component:DonneesPersonnellesComponent},  // donnees personnelles
+  {path:"nousContacter", component:NousContacterComponent}, //Nous contacter
 
   /* routes personnes */
   {path:"clientList", component: ListeClientsComponent},

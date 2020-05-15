@@ -1,0 +1,74 @@
+<p>nous-contacter works!</p>
+<div class="page">
+    <div class="texte">
+        <h2>Nous Contacter</h2>
+
+        <p style="text-align: center; font: bold;">Une question ? Besoin d'un conseil ?</p>
+
+<br/>
+<br/>
+
+        <p style="text-align: center;"> N'hésitez pas à nous contacter en vous rendant à une de nos agences </p> 
+        <a href="/nosAgences"> Cliquez ici pour trouver une agence près de chez vous</a> 
+            
+        <br/>
+        <br/>
+
+        <p style="text-align: center;">Ou prenez contact directement avec l'un de nos agents !</p>
+
+        
+            <div class="row vertical-align">
+
+        <table class="table table-striped" style="margin: auto; border: solid 1px goldenrod;">
+            <tr>
+                <th>Photo</th>
+                <th>Nom</th>
+                <th>Email</th>
+            </tr>
+
+            <tr>
+                <td><img src="assets/images/trombi/Nathan_Muller.png"/></td>
+                <td>Bill Boquet</td>
+                <td>bill.boquet@gmail.com</td>
+            </tr>
+
+            <div *ngFor="let a of agents">
+           
+            <tr>
+                <td><img src="assets/images/trombi/{{a.photo}}"/></td>
+                <td>{{a.nom}}</td>
+                <td>{{a.email}}</td>
+            </tr>
+            
+        </div>
+
+        </table>
+
+        <p style="text-align: center;">Ou nous envoyer votre demande grâce au formulaire ci-dessous :</p>
+
+        <br/>
+
+        <form>
+            <table style="margin: auto;"> 
+                <tr>
+                    <td>Nom : </td>
+                    <td><input type="text" placeholder="Veuillez entrer votre nom" /></td>
+                </tr>
+                <tr>
+                    <td>Mail : </td>
+                    <td><input type="text" placeholder="Veuillez entrer votre adresse email"/></td>
+                </tr>
+                <tr>
+                    <td>Objet : </td>
+                    <td><input type="text" placeholder="Veuillez entrer l'objet de votre message"/></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="right"><input type="text" placeholder="Veuillez entrer votre message ici" style="height: 300px; width: 100%; vertical-align: text-top;" /></td>
+                </tr>
+            </table>
+        </form>
+
+    
+    </div>
+    </div>
+</div>
