@@ -10,7 +10,7 @@ export interface IPersonne {
     email : string;
     motDePasse : number;
     statut : boolean;
-    adressePersonne : IAdressePersonne;
+    adresseP : IAdressePersonne;
 
     photo : string;
 }

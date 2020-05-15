@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientService } from '../../../../services/client.service';
 import { IClient } from '../../../../modele/IClient';
+/* import { Client } from '../../../../modele/Client'; */
 import { Router } from '@angular/router';
 import { AdressePersonneService } from '../../../../services/adresse-personne.service';
 

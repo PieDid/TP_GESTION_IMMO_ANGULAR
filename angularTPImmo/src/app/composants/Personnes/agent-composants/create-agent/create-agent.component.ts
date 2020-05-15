@@ -6,6 +6,7 @@ import {FormControl, Validators} from '@angular/forms';
 import {MatButton, MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon'; */
 import { IAgent } from '../../../../modele/IAgent';
+import { AdressePersonneService } from '../../../../services/adresse-personne.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AgentService } from '../../../../services/agent.service';
 
@@ -17,13 +18,17 @@ import { AgentService } from '../../../../services/agent.service';
 export class CreateAgentComponent implements OnInit {
 
 
-  agent : IAgent = {identifiant:null, nom:null, email:null, motDePasse:null, statut:null, adressePersonne:null,  photo:null, listeVisite:null, listeContrat:null};
+  agent : IAgent = {identifiant:null, nom:null, email:null, motDePasse:null, statut:null, adresseP:null,  photo:null, listeVisite:null, listeContrat:null};
+
+  /* bricolage d'André */
+  adresse: any;
 
   //prop : pour la gestion de l'aperçu de l'image
   previewPhoto : boolean = false;
 
   constructor(private router : Router, 
               private agentService : AgentService, 
+              private adressePersonneService : AdressePersonneService,
               private activatedRoute : ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -54,6 +59,11 @@ export class CreateAgentComponent implements OnInit {
     //--> test du agent à ajouter ou à modifier
     if(this.agent.identifiant == null){
       //--------- nouveau agent -----------//
+      console.log("1-ID de l'adresse : "+ this.adresse);
+      this.adressePersonneService.findAdressePersonneById(this.adresse).subscribe(
+        (adresse) => { this.agent.adresseP = adresse; console.log("1-ID de l'adressePersonne : "+ this.agent.adresseP.rue);}
+      );
+
       //-> appel du service AgentService pour l'ajout de l'agent
       this.agentService.ajouterAgent(this.agent).subscribe(
         (data) => { console.log(data); }
@@ -84,7 +94,7 @@ export class CreateAgentComponent implements OnInit {
   findAgentById(idAgent : number){
     if(idAgent == 0){
       //--------- ajout ----------//
-      this.agent = {identifiant:null, nom:null, email:null, motDePasse:null, statut:null, adressePersonne:null,  photo:null, listeVisite:null, listeContrat:null};
+      this.agent = {identifiant:null, nom:null, email:null, motDePasse:null, statut:null, adresseP:null,  photo:null, listeVisite:null, listeContrat:null};
 
     }else{
       //-------- modif ---------//
