@@ -1,1 +1,124 @@
-<p>create-personne works!</p>
+<!-- formulaire d'ajout d'un client -->
+
+<!--
+    > à la soumission du formulaire on va exécuter la méthode saveOrUpdateClient() du composant
+-->
+<div class="container">
+    <form #personneForm="ngForm" (ngSubmit)="saveOrUpdatePersonne()">
+        <!-- panneau - panel -->
+        <div class="panel panel-primary">
+    
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <!-- ++++++++++ head du panel +++++++++++ -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <div class="panel-heading">
+                <h3 class="panel-title">Ajout d'une nouvelle personne</h3>
+            </div>
+    
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <!-- ++++++++++ body du panel +++++++++++ -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <div class="panel-body">
+    
+    
+                 <!-- ____ input pour la photo ____ -->
+                <div class="form-group">
+                    <label for="p-img">Photo : </label>
+                    <input type="text" class="form-control" placeholder="saisir l'intitulé de la photo" id="p-img" name="photo" [(ngModel)]="personne.photo" pattern="[a-z0-9._%+-]+\.[a-z]{3,}$">
+                </div>
+
+                <!-- ____ bouton pour l'aperçu de la photo ____ -->
+                <div class="form-group">
+                    <button type="button" (click)="togglePhotoPreview()" class="btn btn-light">
+                        {{ previewPhoto ? "Masquer" : "Afficher" }} l'aperçu si intitulé reconnu
+                    </button>
+                </div>
+
+                <!-- ____ aperçu de la photo ____ -->
+                <div class="form-photo">
+                    <input type="image" src="assets/images/trombi/{{personne.photo}}" height="200" width="200" *ngIf="previewPhoto">
+                    <!-- <img src="assets/images/trombi/{{client.photo}}" height="200" width="200" *ngIf="previewPhoto"> -->
+                </div>
+
+                <!-- ____ Nom ____ -->
+                <div class="form-group">
+                    <label for="p-nom">Nom : </label>
+                    <input type="text" class="form-control" placeholder="saisir le nom" id="p-nom" name="nom" [(ngModel)]="personne.nom">
+                </div>
+    
+                <!-- ____ Email ____ -->
+                <div class="form-group">
+                    <label for="email">Email : </label>
+                    <input type="email" class="form-control" placeholder="saisir l'email" id="email" name="email" [(ngModel)]="personne.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                </div>
+                <!-- <div class="example-container">
+                    <mat-form-field appearance="fill">
+                      <mat-label>Entrez l'email</mat-label>
+                      <input matInput placeholder="pat@example.com" value={{client.email}} required>
+                      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+                  </div> -->
+                  
+    
+                <!-- ____ MDP ____ -->
+                <div class="form-group">
+                    <label for="p-mdp">Mot de Passe : </label>
+                    <input type="password" class="form-control" placeholder="saisir le mot de passe" id="p-mdp" name="mdp" [(ngModel)]="personne.motDePasse">
+                </div>
+                
+
+                <!-- ____ Adresse ____ -->
+                <div class="form-group">
+                    <label for="p-adresse">Adresse : </label>
+                    <input type="text" class="form-control" placeholder="saisir l'id de l'adresse" id="p-adresse" name="adresse" [(ngModel)]="adresse">
+                   <!--  <input type="text" class="form-control" placeholder="saisir l'adresse" id="p-adresse" name="adresse" [(ngModel)]="personne.adresseP"> -->
+                </div>
+                  
+    
+                <!-- ____ Statut ____ -->
+                <div class="form-group">
+                    <label for="p-salaire">Statut : </label>
+                    <input type="text" class="form-control" placeholder="saisir le statut (true/false)" id="p-statut" name="statut" [(ngModel)]="personne.statut">
+                </div>
+                <!-- <div class="statut-container">
+                    <form appearance="fill">
+                        <label>Statut :</label><br>
+                        <select [(ngModel)]="client.statut" id="statut">
+                        <option value="true">true</option>
+                        <option value="false">false</option>
+                        </select>
+                        <!-- <input type="text" class="form-control" placeholder="saisir le mot de passe" id="statut" name="statut" [(ngModel)]="client.statut"> -->
+                        <!-- <script>
+                            var selectElmt = document.getElementById("statut");
+                            var valeurselectionnee = selectElmt.options[selectElmt.selectedIndex].value;
+                            client.statut = valeurselectionnee;
+                        </script> -->
+                        <!-- <mat-hint >Here's the dropdown arrow ^</mat-hint> -->
+                    <!-- </form> 
+                </div> -->
+            <!-- <div class="example-container">
+                <mat-form-field appearance="fill">
+                    <mat-label>Select me</mat-label>
+                    <select mat-select>
+                      <mat-option value="true">Actif</mat-option>
+                      <mat-option value="false">Inactif</mat-option>
+                    </select>
+                    <mat-hint align="end">Here's the dropdown arrow ^</mat-hint>
+                </mat-form-field>
+            </div> -->
+                
+    
+    
+            </div>
+    
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <!-- ++++++++++ footer du panel +++++++++++ -->
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+            <div class="panel-footer">
+                <button class="btn btn-save btn-save">Enregistrer</button>
+            </div>
+    
+        </div>
+    </form>
+    
+    </div>
