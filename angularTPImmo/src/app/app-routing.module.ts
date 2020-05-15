@@ -41,8 +41,6 @@ import { ListeContratVenteComponent } from 'src/app/composants/Contrats/contratV
 import { CreateContratVenteComponent } from 'src/app/composants/Contrats/contratVente-composants/create-contrat-vente/create-contrat-vente.component'
 import { ListeAdressePersonneComponent } from './composants/Adresses/adressePersonne-composants/liste-adresse-personne/liste-adresse-personne.component';
 import { CreateAdressePersonneComponent } from './composants/Adresses/adressePersonne-composants/create-adresse-personne/create-adresse-personne.component';
-import { ListePersonnesComponent } from './composants/Personnes/personne-composants/liste-personnes/liste-personnes.component';
-import { CreatePersonneComponent } from './composants/Personnes/personne-composants/create-personne/create-personne.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"accueil", pathMatch:'full'}, // route par défaut - redirection
@@ -60,8 +58,6 @@ const routes: Routes = [
   {path:"proprietaireEdit/:id", component: CreateProprietaireComponent},
   {path:"administrateurList", component: ListeAdministrateursComponent},
   {path:"administrateurEdit/:id", component: CreateAdministrateurComponent},
-  {path:"personneList", component: ListePersonnesComponent},
-  {path:"personneEdit/:id", component: CreatePersonneComponent},
 
   /* routes biens */
   {path:"terrainList", component: ListeTerrainsComponent },

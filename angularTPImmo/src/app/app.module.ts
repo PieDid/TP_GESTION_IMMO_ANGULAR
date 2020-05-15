@@ -56,8 +56,6 @@ import { CreateAdressePersonneComponent } from './composants/Adresses/adressePer
 import { CreateAdresseBienComponent } from './composants/Adresses/adresseBien-composants/create-adresse-bien/create-adresse-bien.component';
 import { CreateContratLocationComponent } from './composants/Contrats/contratLocation-composants/create-contrat-location/create-contrat-location.component';
 import { CreateContratVenteComponent } from './composants/Contrats/contratVente-composants/create-contrat-vente/create-contrat-vente.component';
-import { ListePersonnesComponent } from './composants/Personnes/personne-composants/liste-personnes/liste-personnes.component';
-import { CreatePersonneComponent } from './composants/Personnes/personne-composants/create-personne/create-personne.component';
 
 
 
@@ -113,8 +111,6 @@ import { CreatePersonneComponent } from './composants/Personnes/personne-composa
     CreateContratLocationComponent,
     CreateContratVenteComponent,
     CreateAdressePersonneComponent,
-    ListePersonnesComponent,
-    CreatePersonneComponent
   ],
   imports: [
     HttpClientModule,
