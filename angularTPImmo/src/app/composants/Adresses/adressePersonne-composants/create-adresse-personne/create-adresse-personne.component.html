@@ -1,57 +1,60 @@
 <!-- formulaire d'ajout d'une adressePersonne -->
-<!--
+
 <div class="container">
     <form #adressePersonneForm="ngForm" (ngSubmit)="saveOrUpdateAdressePersonne()">
-        
+
         <div class="panel panel-primary">
-    
-             ++++++++++++++++++++++++++++++++++++++++++++
-            ++++++++++ head du panel +++++++++++ 
-             ++++++++++++++++++++++++++++++++++++++++++++ 
+
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++
+            ++++++++++ head du panel +++++++++++
+            ++++++++++++++++++++++++++++++++++++++++++++ -->
             <div class="panel-heading">
                 <h3 class="panel-title">Ajout d'une nouvelle adresse d'une personne</h3>
             </div>
-    
-             ++++++++++++++++++++++++++++++++++++++++++++ 
-             ++++++++++ body du panel +++++++++++ 
-            ++++++++++++++++++++++++++++++++++++++++++++ 
+
+           <!--  ++++++++++++++++++++++++++++++++++++++++++++
+            ++++++++++ body du panel +++++++++++
+            ++++++++++++++++++++++++++++++++++++++++++++ -->
             <div class="panel-body">
 
-                 ____ Rue ____ 
+               <!--  ____ Rue ____ -->
                 <div class="form-group">
                     <label for="p-rue">Adresse : </label>
-                    <input type="text" class="form-control" placeholder="Saisir l'adresse de la personne" id="p-rue" name="rue" [(ngModel)]="adressePersonne.rue">
-                </div>
-    
-                 ____ Code Postal ____ 
-                <div class="form-group">
-                    <label for="p-codePostal">Code Postal : </label>
-                    <input type="text" class="form-control" placeholder="Saisir le code postal de l'adresse" id="p-codePostal" name="codePostal" [(ngModel)]="adressePersonne.codePostal">
+                    <input type="text" class="form-control" placeholder="Saisir l'adresse de la personne" id="p-rue"
+                        name="rue" [(ngModel)]="adressePersonne.rue">
                 </div>
 
-                 ____ Ville ____ 
+               <!--  ____ Code Postal ____ -->
+                <div class="form-group">
+                    <label for="p-codePostal">Code Postal : </label>
+                    <input type="text" class="form-control" placeholder="Saisir le code postal de l'adresse"
+                        id="p-codePostal" name="codePostal" [(ngModel)]="adressePersonne.codePostal">
+                </div>
+
+                <!-- ____ Ville ____ -->
                 <div class="form-group">
                     <label for="p-ville">Ville : </label>
-                    <input type="text" class="form-control" placeholder="Saisir la ville de l'adresse" id="p-ville" name="ville" [(ngModel)]="adressePersonne.ville">
+                    <input type="text" class="form-control" placeholder="Saisir la ville de l'adresse" id="p-ville"
+                        name="ville" [(ngModel)]="adressePersonne.ville">
                 </div>
-                  
-                 ____ Personne ____ 
+
+                <!-- ____ Personne ____ -->
                 <div class="form-group">
-                    <label for="p-bien">Numéro de la personne : </label>
-                    <input type="text" class="form-control" placeholder="Saisir le numéro de la personne" id="p-personne" name="personne" [(ngModel)]="adressePersonne.personne">
+                    <label for="p-personne">Numéro de la personne : </label>
+                    <input type="text" class="form-control" placeholder="Saisir le numéro de la personne"
+                        id="p-personne" name="personne" [(ngModel)]="adressePersonne.personne">
                 </div>
 
             </div>
-    
-            ++++++++++++++++++++++++++++++++++++++++++++ 
-             ++++++++++ footer du panel +++++++++++ 
-             ++++++++++++++++++++++++++++++++++++++++++++ 
+
+            <!-- ++++++++++++++++++++++++++++++++++++++++++++
+            ++++++++++ footer du panel +++++++++++
+            ++++++++++++++++++++++++++++++++++++++++++++ -->
             <div class="panel-footer">
                 <button class="btn btn-save btn-save">Enregistrer</button>
             </div>
-    
+
         </div>
     </form>
-    
-    </div>
--->
+
+</div>
