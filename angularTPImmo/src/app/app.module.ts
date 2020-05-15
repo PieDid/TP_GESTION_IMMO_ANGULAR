@@ -52,7 +52,6 @@ import { CreateEntrepotComponent } from './composants/Biens/Commerciaux/entrepot
 import { AuthInterceptor } from './helpers/auth.interceptor';
 import { ListeVisitesComponent } from './composants/Visite/visites-composants/liste-visites/liste-visites.component';
 import { CreateVisiteComponent } from './composants/Visite/visites-composants/create-visite/create-visite.component';
-import { CreateAdressePersonneComponent } from './composants/Adresses/adressePersonne-composants/create-adresse-personne/create-adresse-personne.component';
 import { CreateAdresseBienComponent } from './composants/Adresses/adresseBien-composants/create-adresse-bien/create-adresse-bien.component';
 import { CreateContratLocationComponent } from './composants/Contrats/contratLocation-composants/create-contrat-location/create-contrat-location.component';
 import { CreateContratVenteComponent } from './composants/Contrats/contratVente-composants/create-contrat-vente/create-contrat-vente.component';
@@ -109,8 +108,7 @@ import { CreateContratVenteComponent } from './composants/Contrats/contratVente-
     CreateVisiteComponent,
     CreateAdresseBienComponent,
     CreateContratLocationComponent,
-    CreateContratVenteComponent,
-    CreateAdressePersonneComponent,
+    CreateContratVenteComponent
   ],
   imports: [
     HttpClientModule,
